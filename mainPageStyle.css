@@ -1,0 +1,85 @@
+body{
+    margin: 0;
+    padding:0;
+    background: linear-gradient(#D9B8FF, #8D80F2);
+
+}
+ul{
+    justify-content: flex-end;
+}
+
+#main-nav{
+    background-color: #25232A;
+    height: 5vh;
+    display: flex; 
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#main-nav-list {
+    display: inline-flex;
+    width: 170px;
+    justify-content: space-around;
+    list-style: none;
+    margin-right: 5%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size:medium;
+    font:bold;
+    color: aliceblue;
+}
+
+
+
+#top-section{
+    height: 33vh;
+    width: 100%;
+}
+#mid-section{
+    height: 33vh;
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 60%;
+    display: inline-flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+#bottom-section{
+    height: 33vh;
+    width: 100%;
+}
+
+#main-foot{
+    display: flex; 
+    align-items: center;
+    background-color: #25232A;
+    height: 25vh;
+}
+#game-match-logo{
+    display: inline;
+    margin-right: 70%;
+    color: #D9B8FF;
+}
+
+#game-match-logo-foot{
+    display: inline;
+    color: #D9B8FF;
+    margin-left: 10%;
+    margin-bottom: 8%;
+}
+
+.circle {
+    height: 200px;
+    width: 200px;
+    background-color: #8D80F2;
+    border: solid #8D80F2;
+    border-radius: 50%;
+}
+
+#main-foot-list {
+    color: white;
+    list-style: none;
+
+}
