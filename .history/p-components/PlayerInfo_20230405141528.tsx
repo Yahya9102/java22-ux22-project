@@ -7,10 +7,7 @@ function PlayerInfo() {
       <table className={styles.player_info}>
         <tbody>
           <tr>
-            <th>Yahya</th>
-          </tr>
-          <tr>
-            <td>Jag vill spela wow</td>
+            <th className=" pl-7">Yahya</th>
           </tr>
           <tr>
             <td>
@@ -18,7 +15,9 @@ function PlayerInfo() {
               framför datorn
             </td>
           </tr>
-
+          <tr>
+            <td>Jag vill spela wow</td>
+          </tr>
           <tr>
             <td>här är min discord</td>
           </tr>

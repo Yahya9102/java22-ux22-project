@@ -34,7 +34,7 @@ const RegisterForm: React.FC = () => {
           <button type="submit" className=" rounded-md px-2 py-1 bg-slate-400">
             Submit
           </button>
-          console.log(name,gamertag,gamertag,discord,games)
+          console.log(submit)
         </fieldset>
       </form>
     </div>

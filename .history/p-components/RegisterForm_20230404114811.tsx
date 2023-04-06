@@ -1,7 +1,7 @@
 import React from "react"
 import styles from "./styles/registerForm.module.css"
 
-const RegisterForm: React.FC = () => {
+function RegisterForm() {
   return (
     <div>
       <form action="submit" className={styles.form}>
@@ -34,7 +34,6 @@ const RegisterForm: React.FC = () => {
           <button type="submit" className=" rounded-md px-2 py-1 bg-slate-400">
             Submit
           </button>
-          console.log(name,gamertag,gamertag,discord,games)
         </fieldset>
       </form>
     </div>
