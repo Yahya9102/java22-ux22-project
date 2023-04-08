@@ -15,10 +15,9 @@ function PlayerInfo() {
 
   useEffect(() => {
     const fetchData = async () => {
-      // Connect to the MongoDB server
       const client = new MongoClient("mongodb://localhost:27017")
       await client.connect()
-      const db = client.db("gamematch")
+      const db = client.db("GameMatch")
       const collection = db.collection("users")
       const data = await collection.find().toArray()
       const users = data.map((document) => {

@@ -9,24 +9,30 @@ const RegisterForm: React.FC = () => {
   const [discord, setDiscord] = useState("")
   const [gender, setGender] = useState("")
 
-  const handleClick = async () => {
-    const client = new MongoClient("mongodb://localhost:27017")
-    await client.connect()
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
 
-    const db = client.db("GameMatch")
-    const collection = db.collection("users")
+    try {
+      const client = new MongoClient("mongodb://localhost:27017")
+      await client.connect()
 
-    const user = { name, gamertag, games, discord, gender }
-    await collection.insertOne(user)
+      const db = client.db("GameMatch")
+      const collection = db.collection("Users")
 
-    await client.close()
+      const user = { name, gamertag, games, discord, gender }
+      await collection.insertOne(user)
 
-    console.log(name, gamertag, games, discord, gender)
+      await client.close()
+
+      console.log("User added to database:", user)
+    } catch (error) {
+      console.error("Error inserting user into database:", error)
+    }
   }
 
   return (
     <div>
-      <form className={styles.form}>
+      <form onSubmit={handleSubmit} className={styles.form}>
         <fieldset>
           <label htmlFor="name">Name</label>
           <br />
@@ -83,11 +89,7 @@ const RegisterForm: React.FC = () => {
           />
           <br />
           <br />
-          <button
-            type="button"
-            onClick={handleClick}
-            className="rounded-md px-2 py-1 bg-slate-400"
-          >
+          <button type="submit" className=" rounded-md px-2 py-1 bg-slate-400">
             Submit
           </button>
         </fieldset>

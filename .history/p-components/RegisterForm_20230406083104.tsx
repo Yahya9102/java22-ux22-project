@@ -9,12 +9,12 @@ const RegisterForm: React.FC = () => {
   const [discord, setDiscord] = useState("")
   const [gender, setGender] = useState("")
 
-  const handleClick = async () => {
+  const handleSubmit = async () => {
     const client = new MongoClient("mongodb://localhost:27017")
     await client.connect()
 
     const db = client.db("GameMatch")
-    const collection = db.collection("users")
+    const collection = db.collection("Users")
 
     const user = { name, gamertag, games, discord, gender }
     await collection.insertOne(user)
@@ -85,8 +85,8 @@ const RegisterForm: React.FC = () => {
           <br />
           <button
             type="button"
-            onClick={handleClick}
-            className="rounded-md px-2 py-1 bg-slate-400"
+            className=" rounded-md px-2 py-1 bg-slate-400"
+            onClick={handleSubmit}
           >
             Submit
           </button>

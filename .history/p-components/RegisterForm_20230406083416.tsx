@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { use, useState } from "react"
 import styles from "./styles/registerForm.module.css"
 import { MongoClient } from "mongodb"
 
@@ -9,7 +9,9 @@ const RegisterForm: React.FC = () => {
   const [discord, setDiscord] = useState("")
   const [gender, setGender] = useState("")
 
-  const handleClick = async () => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault() // prevent default form submission behavior
+
     const client = new MongoClient("mongodb://localhost:27017")
     await client.connect()
 
@@ -85,8 +87,8 @@ const RegisterForm: React.FC = () => {
           <br />
           <button
             type="button"
-            onClick={handleClick}
-            className="rounded-md px-2 py-1 bg-slate-400"
+            className=" rounded-md px-2 py-1 bg-slate-400"
+            onClick={handleSubmit}
           >
             Submit
           </button>

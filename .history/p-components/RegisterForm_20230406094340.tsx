@@ -22,6 +22,7 @@ const RegisterForm: React.FC = () => {
     await client.close()
 
     console.log(name, gamertag, games, discord, gender)
+    
   }
 
   return (

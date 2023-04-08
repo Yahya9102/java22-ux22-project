@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import styles from "./styles/playerInfo.module.css"
+import { User } from "../types/user"
 import { MongoClient } from "mongodb"
 
 interface User {

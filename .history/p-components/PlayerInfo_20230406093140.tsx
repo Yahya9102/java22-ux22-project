@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import styles from "./styles/playerInfo.module.css"
-import { MongoClient } from "mongodb"
+import mongoose from "mongoose"
+import { options } from "./dbOptions"
 
 interface User {
   name: string
@@ -10,24 +11,41 @@ interface User {
   gender: string
 }
 
+// Define a schema for the documents in the collection
+const userSchema = new mongoose.Schema<User>({
+  name: String,
+  gamertag: String,
+  games: String,
+  discord: String,
+  gender: String,
+})
+
+// Create a model for the collection using the schema
+const User = mongoose.model<User>("User", userSchema)
+
 function PlayerInfo() {
   const [users, setUsers] = useState<User[]>([])
 
   useEffect(() => {
     const fetchData = async () => {
-      // Connect to the MongoDB server
-      const client = new MongoClient("mongodb://localhost:27017")
-      await client.connect()
-      const db = client.db("gamematch")
-      const collection = db.collection("users")
-      const data = await collection.find().toArray()
-      const users = data.map((document) => {
-        const { name, gamertag, games, discord, gender } = document
-        return { name, gamertag, games, discord, gender }
-      })
-      setUsers(users)
-      await client.close()
+      // Connect to the MongoDB server using Mongoose
+      await mongoose.connect("mongodb://localhost:27017", options)
+
+      console.log("Connected to MongoDB server")
+
+      try {
+        // Fetch all documents from the "users" collection
+        const data = await User.find().exec()
+        setUsers(data)
+        console.log("Fetched documents:", data)
+      } catch (error) {
+        console.error("Error fetching documents from MongoDB:", error)
+      } finally {
+        // Disconnect from the MongoDB server
+        await mongoose.disconnect()
+      }
     }
+
     fetchData()
   }, [])
 
