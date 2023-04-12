@@ -1,7 +1,12 @@
 import React, { useState } from "react"
 import styles from "./styles/registerForm.module.css"
 
-interface Form {
+interface Props {
+  user: User
+  setUser: (user: User) => void
+}
+
+interface User {
   name: string
   gamertag: string
   games: string
@@ -9,14 +14,12 @@ interface Form {
   gender: string
 }
 
-function RegisterForm() {
-  const [register, setRegister] = useState<Form>({
-    name: "",
-    gamertag: "",
-    games: "",
-    discord: "",
-    gender: "",
-  })
+const RegisterForm: React.FC<Props> = ({ user, setUser }) => {
+  const [formData, setFormData] = useState<User>(user)
+
+  const handleClick = () => {
+    setUser(formData)
+  }
 
   return (
     <div>
@@ -28,9 +31,9 @@ function RegisterForm() {
             type="text"
             name="name"
             id="name"
-            value={register.name}
+            value={formData.name}
             onChange={(event) =>
-              setRegister({ ...register, name: event.target.value })
+              setFormData({ ...formData, name: event.target.value })
             }
           />
           <br />
@@ -41,9 +44,9 @@ function RegisterForm() {
             type="text"
             name="gamertag"
             id="gamertag"
-            value={register.gamertag}
+            value={formData.gamertag}
             onChange={(event) =>
-              setRegister({ ...register, gamertag: event.target.value })
+              setFormData({ ...formData, gamertag: event.target.value })
             }
           />
           <br />
@@ -54,9 +57,9 @@ function RegisterForm() {
             type="text"
             name="games"
             id="games"
-            value={register.games}
+            value={formData.games}
             onChange={(event) =>
-              setRegister({ ...register, games: event.target.value })
+              setFormData({ ...formData, games: event.target.value })
             }
           />
           <br />
@@ -67,9 +70,9 @@ function RegisterForm() {
             type="text"
             name="discord"
             id="discord"
-            value={register.discord}
+            value={formData.discord}
             onChange={(event) =>
-              setRegister({ ...register, discord: event.target.value })
+              setFormData({ ...formData, discord: event.target.value })
             }
           />
           <br />
@@ -80,20 +83,22 @@ function RegisterForm() {
             type="text"
             name="gender"
             id="gender"
-            value={register.gender}
+           
+            value={formData.gender}
             onChange={(event) =>
-              setRegister({ ...register, gender: event.target.value })
+              setFormData({ ...formData, gender: event.target.value })
             }
           />
           <br />
           <br />
-          <button type="button" className="rounded-md px-2 py-1 bg-slate-400">
+          <button
+            type="button"
+            onClick={handleClick}
+            className="rounded-md px-2 py-1 bg-slate-400"
+          >
             Submit
           </button>
         </fieldset>
       </form>
     </div>
-  )
-}
-
-export default RegisterForm
+    
