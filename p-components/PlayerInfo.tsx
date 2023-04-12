@@ -13,24 +13,6 @@ interface User {
 function PlayerInfo() {
   const [users, setUsers] = useState<User[]>([])
 
-  useEffect(() => {
-    const fetchData = async () => {
-      // Connect to the MongoDB server
-      const client = new MongoClient("mongodb://localhost:27017")
-      await client.connect()
-      const db = client.db("gamematch")
-      const collection = db.collection("users")
-      const data = await collection.find().toArray()
-      const users = data.map((document) => {
-        const { name, gamertag, games, discord, gender } = document
-        return { name, gamertag, games, discord, gender }
-      })
-      setUsers(users)
-      await client.close()
-    }
-    fetchData()
-  }, [])
-
   return (
     <div>
       <table className={styles.player_info}>
