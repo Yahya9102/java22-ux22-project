@@ -12,7 +12,7 @@ const Header: NextPage<Props> = ({}) => {
         <Image src={burgermenu} alt={"#"} className={styles.menu_icon}></Image>
       </div>
       <div className={styles.menu_title}>
-        <h1>Posts</h1>
+        <h1>GameMatch</h1>
       </div>
     </header>
   )
