@@ -1,0 +1,29 @@
+.footer_body {
+    display: flex;
+    height: 100vh;
+    background-color: gray;
+    align-items: flex-end;
+}
+.main_footer {
+    background-color: white;
+    display: flex;
+    height: 8%;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+}
+
+.submitButton {
+    background-color: white;
+    width: 54px;
+    height: 54px;
+    border: 2px solid black;
+    border-color: black;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;  
+}
+
+
