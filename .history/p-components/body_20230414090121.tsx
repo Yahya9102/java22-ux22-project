@@ -35,7 +35,8 @@ const Body: NextPage<Props> = ({}) => {
               <div className={styles.table_button_wrapper}>
                 <Image
                   src={heartimage}
-                  className={styles.heartimage}
+                  width={50}
+                  height={36}
                   alt="Heart icon"
                 />
                 <button className={styles.table_button}>Reply</button>

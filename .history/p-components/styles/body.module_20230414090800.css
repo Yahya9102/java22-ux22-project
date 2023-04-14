@@ -12,7 +12,7 @@
   background-color: #c1dff2;
   border-radius: 4px;
   padding: 5px 10px;
-  margin-left: 75%;
+  margin-left: 85%;
 }
 
 .fieldset_row:before {
@@ -35,6 +35,5 @@
 
 .heartimage {
   background-image: none;
-  width: 7%;
-  margin-top: 4px;
+  width: 4%;
 }
