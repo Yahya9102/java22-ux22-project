@@ -1,8 +1,5 @@
+import React from "react"
 import styles from "./styles/mainFooter.module.css"
-import RegisterForm from "./RegisterForm"
-import React, { useState } from "react"
-
-
 
 
 

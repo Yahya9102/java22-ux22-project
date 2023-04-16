@@ -1,18 +1,15 @@
-.footer_body {
-    display: flex;
-    height: 100vh;
-    background-color: rgb(197, 196, 196);
-    align-items: flex-end;
-}
+
 .main_footer {
     background-color: white;
     display: flex;
-    height: 10%;
+    height: 9vh;
     width: 100%;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 15px 15px 0px 0px;
     border: 2px solid black;
     justify-content: center;
     align-items: center;
+    bottom:0;
+    position: fixed;   
 }
 
 
