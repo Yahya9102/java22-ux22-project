@@ -6,7 +6,7 @@ import { useState } from "react"
 
 interface Props {
   name: string
-  infoPost: string
+  gender: string
   discord: string
 }
 
