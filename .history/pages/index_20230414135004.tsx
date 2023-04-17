@@ -6,7 +6,7 @@ interface Props {}
 const Index: NextPage<Props> = ({}) => {
   return (
     <div>
-      <PlayerInfo name={""} gender={""} discord={""} />
+      <PlayerInfo name={"Hej"} gender={""} discord={""} />
     </div>
   )
 }
