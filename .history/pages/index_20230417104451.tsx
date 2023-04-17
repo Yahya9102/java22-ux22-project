@@ -8,8 +8,8 @@ interface Props {}
 const Index: NextPage<Props> = ({}) => {
   return (
     <div>
-      <Header />
-      <h1 className=" justify-center">
+      <Header />{" "}
+      <h1 className="pl-36% mx-auto max-w-2xl">
         <strong>Posts</strong>
       </h1>
       <PlayerInfo name={""} infoPost={""} discord={""} />

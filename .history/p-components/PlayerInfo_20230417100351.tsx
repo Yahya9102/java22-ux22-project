@@ -6,7 +6,7 @@ import { useState } from "react"
 
 interface Props {
   name: string
-  infoPost: string
+  gender: string
   discord: string
 }
 
@@ -65,7 +65,7 @@ const Body: NextPage<Props> = ({}) => {
                 </div>
               </td>
             </tr>
-            {/**   <tr>
+            <tr>
               <td>
                 <div className={styles.table_button_wrapper}>
                   <Image
@@ -76,7 +76,7 @@ const Body: NextPage<Props> = ({}) => {
                   <button className={styles.table_button}>Reply</button>
                 </div>
               </td>
-            </tr> */}
+            </tr>
           </tbody>
         </table>
       </fieldset>

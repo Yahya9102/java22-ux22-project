@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.index_posts_text {
+h1 {
   display: flex;
   align-items: center;
 }
