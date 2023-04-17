@@ -10,6 +10,8 @@ const Index: NextPage<Props> = ({}) => {
     <div>
       <Header />
       <PlayerInfo name={""} gender={""} discord={""} />
+      <PlayerInfo name={""} gender={""} discord={""} />
+      <PlayerInfo name={""} gender={""} discord={""} />
       <MainFooter />
     </div>
   )

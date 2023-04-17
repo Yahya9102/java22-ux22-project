@@ -8,9 +8,11 @@ interface Props {}
 const Index: NextPage<Props> = ({}) => {
   return (
     <div>
-      <Header />
-      <PlayerInfo name={""} gender={""} discord={""} />
-      <MainFooter />
+      <div>
+        <Header />
+        <PlayerInfo name={""} gender={""} discord={""} />
+        <MainFooter />
+      </div>
     </div>
   )
 }

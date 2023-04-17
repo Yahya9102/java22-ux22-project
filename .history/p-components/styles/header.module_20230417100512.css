@@ -1,10 +1,16 @@
 .header {
   background-color: #fff;
+  position: absolute;
+  width: 100%;
+  /* width: 60%; */
+  height: 10%;
+  left: 2px;
+  top: 2px;
 
-  display: flex;
-
-  border-radius: 0px 0px 8px 8px;
+  /* border-radius: 0px 0px 8px 8px; */
   border: 1px solid black;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .menu_icon_div {
@@ -32,4 +38,8 @@
 .menu_icon {
   width: 27px;
   height: 24px;
+}
+
+.header_body {
+  display: flex;
 }
