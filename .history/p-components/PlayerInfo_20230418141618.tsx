@@ -29,6 +29,13 @@ const Body: NextPage<Props> = ({}) => {
 
   return (
     <div>
+      <button
+        onClick={() => {
+          console.log(users)
+        }}
+      >
+        display console data
+      </button>
       {Array.isArray(users) &&
         users.map((user) => (
           <fieldset className={styles.fieldset_body} key={user.name}>

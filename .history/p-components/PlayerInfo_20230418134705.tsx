@@ -1,9 +1,15 @@
 import { NextPage } from "next"
 import styles from "p-components/styles/playerInfo.module.css"
 import { useEffect, useState } from "react"
-import { User } from "@/types/users"
 //import Image from "next/image"
 //import heartimage from "../public/heartimage.png"
+
+interface User {
+  name: string
+  title: string
+  discord: string
+  postInfo: string
+}
 
 interface Props {}
 
@@ -45,7 +51,7 @@ const Body: NextPage<Props> = ({}) => {
                     <fieldset className={styles.fieldset_row}>
                       <h2 className={styles.playerInfo_h2}>{user.title}</h2>
                       <br />
-                      <p> {user.post}</p>
+                      <p> key={user.postInfo}</p>
                     </fieldset>
                   </td>
                 </tr>
@@ -56,7 +62,7 @@ const Body: NextPage<Props> = ({}) => {
                         <br />
                         <h2 className={styles.playerInfo_h2}>
                           <strong>Contact</strong>
-                        </h2>
+                        </h2>{" "}
                         <br />
                         <a href="https://discord.com/">
                           <strong>Discord: {user.discord}</strong>

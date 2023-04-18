@@ -1,9 +1,15 @@
 import { NextPage } from "next"
 import styles from "p-components/styles/playerInfo.module.css"
 import { useEffect, useState } from "react"
-import { User } from "@/types/users"
 //import Image from "next/image"
 //import heartimage from "../public/heartimage.png"
+
+interface User {
+  name: string
+  title: string
+  discord: string
+  post: string
+}
 
 interface Props {}
 
@@ -29,6 +35,13 @@ const Body: NextPage<Props> = ({}) => {
 
   return (
     <div>
+      <button
+        onClick={() => {
+          console.log(users)
+        }}
+      >
+        display console data
+      </button>
       {Array.isArray(users) &&
         users.map((user) => (
           <fieldset className={styles.fieldset_body} key={user.name}>

@@ -1,9 +1,15 @@
 import { NextPage } from "next"
 import styles from "p-components/styles/playerInfo.module.css"
 import { useEffect, useState } from "react"
-import { User } from "@/types/users"
 //import Image from "next/image"
 //import heartimage from "../public/heartimage.png"
+
+interface User {
+  name: string
+  title: string
+  discord: string
+  infoPost: string
+}
 
 interface Props {}
 
@@ -13,7 +19,7 @@ const Body: NextPage<Props> = ({}) => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch("http://localhost:3000/api/")
+        const response = await fetch("http://localhost:3000/api/users")
         const data = await response.json()
         if (Array.isArray(data)) {
           setUsers(data)
@@ -45,7 +51,7 @@ const Body: NextPage<Props> = ({}) => {
                     <fieldset className={styles.fieldset_row}>
                       <h2 className={styles.playerInfo_h2}>{user.title}</h2>
                       <br />
-                      <p> {user.post}</p>
+                      <p>{user.infoPost}</p>
                     </fieldset>
                   </td>
                 </tr>
@@ -56,7 +62,7 @@ const Body: NextPage<Props> = ({}) => {
                         <br />
                         <h2 className={styles.playerInfo_h2}>
                           <strong>Contact</strong>
-                        </h2>
+                        </h2>{" "}
                         <br />
                         <a href="https://discord.com/">
                           <strong>Discord: {user.discord}</strong>
