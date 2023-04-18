@@ -5,8 +5,8 @@
 
 .fieldset_body {
   background: linear-gradient(to bottom, rgba(30, 30, 30, 1) 23%, #f9f9f9 20%);
-  border: 3px solid rgb(23, 9, 9);
-  border-radius: 10px;
+  border: 2px solid rgb(23, 9, 9);
+  border-radius: 14px;
   padding: 10px;
   margin: 5px;
 }

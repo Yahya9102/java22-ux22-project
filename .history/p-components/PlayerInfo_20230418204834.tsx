@@ -33,21 +33,19 @@ const Body: NextPage<Props> = ({}) => {
         users.map((user) => (
           <fieldset className={styles.fieldset_body} key={user.name}>
             <table>
-              <thead>
-                <tr>
-                  <th className={styles.tableHeader_PlayerInfo}>
-                    {user.name}
-                    <h6 className={styles.user_location}> {user.location}</h6>
-                  </th>
-                </tr>
-              </thead>
+              <tr>
+                <th className={styles.tableHeader_PlayerInfo}>
+                  {user.name}
+                  <h6 className={styles.user_location}> {user.location}</h6>
+                </th>
+              </tr>
 
               <tbody>
                 <tr>
                   <td>
                     <h2 className={styles.playerInfo_h2_title}>{user.title}</h2>
                     <br />
-                    <p className={styles.playerInfo_p}> {user.post}</p>
+                    <p> {user.post}</p>
                   </td>
                 </tr>
                 <tr>

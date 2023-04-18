@@ -47,7 +47,7 @@ const Body: NextPage<Props> = ({}) => {
                   <td>
                     <h2 className={styles.playerInfo_h2_title}>{user.title}</h2>
                     <br />
-                    <p className={styles.playerInfo_p}> {user.post}</p>
+                    <p> {user.post}</p>
                   </td>
                 </tr>
                 <tr>

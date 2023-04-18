@@ -45,9 +45,11 @@ const Body: NextPage<Props> = ({}) => {
               <tbody>
                 <tr>
                   <td>
-                    <h2 className={styles.playerInfo_h2_title}>{user.title}</h2>
-                    <br />
-                    <p className={styles.playerInfo_p}> {user.post}</p>
+                    <fieldset className={styles.fieldset_row}>
+                      <h2 className={styles.playerInfo_h2}>{user.title}</h2>
+                      <br />
+                      <p> {user.post}</p>
+                    </fieldset>
                   </td>
                 </tr>
                 <tr>
@@ -55,12 +57,14 @@ const Body: NextPage<Props> = ({}) => {
                     <div>
                       <nav>
                         <br />
-                        <h2 className={styles.playerInfo_h2}>Contact</h2>
+                        <h2 className={styles.playerInfo_h2}>
+                          <strong>Contact</strong>
+                        </h2>
                         <br />
                         <a href="https://discord.com/">
                           <p className={styles.playerInfo_p}>
                             {" "}
-                            <strong> Discord:</strong> {user.discord}
+                            Discord: {user.discord}
                           </p>
                         </a>
                       </nav>
