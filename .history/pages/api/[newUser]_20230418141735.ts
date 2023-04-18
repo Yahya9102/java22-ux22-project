@@ -1,6 +1,11 @@
 import { connectToDatabase } from "@/utils/db"
 import type { NextApiRequest, NextApiResponse } from "next"
-import { User } from "@/types/users"
+type User = {
+  name: string
+  title: string
+  post: string
+  discord: string
+}
 
 export default async function handler(
   req: NextApiRequest,
