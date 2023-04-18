@@ -16,7 +16,8 @@
 */
 
 .user_location {
-  font-size: 10px;
+  color: white;
+  text-align: left;
 }
 
 .tableHeader_PlayerInfo {

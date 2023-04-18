@@ -35,21 +35,16 @@ const Body: NextPage<Props> = ({}) => {
             <table>
               <thead>
                 <tr>
-                  <th className={styles.tableHeader_PlayerInfo}>
-                    {user.name}
-                    <h6 className={styles.user_location}> {user.location}</h6>
-                  </th>
+                  <th className={styles.tableHeader_PlayerInfo}>{user.name}</th>
                 </tr>
               </thead>
 
               <tbody>
                 <tr>
                   <td>
-                    <fieldset className={styles.fieldset_row}>
-                      <h2 className={styles.playerInfo_h2}>{user.title}</h2>
-                      <br />
-                      <p> {user.post}</p>
-                    </fieldset>
+                    <h2 className={styles.playerInfo_h2}>{user.title}</h2>
+                    <br />
+                    <p> {user.post}</p>
                   </td>
                 </tr>
                 <tr>

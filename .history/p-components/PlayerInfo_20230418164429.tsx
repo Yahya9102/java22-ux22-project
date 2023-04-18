@@ -37,7 +37,7 @@ const Body: NextPage<Props> = ({}) => {
                 <tr>
                   <th className={styles.tableHeader_PlayerInfo}>
                     {user.name}
-                    <h6 className={styles.user_location}> {user.location}</h6>
+                    <h6> {user.location}</h6>
                   </th>
                 </tr>
               </thead>

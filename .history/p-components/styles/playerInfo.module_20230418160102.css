@@ -1,6 +1,6 @@
 /* Add a background color and border to the fieldset */
 .fieldset_body {
-  background: linear-gradient(to bottom, black 20%, #f9f9f9 20%);
+  background-color: #f9f9f9;
   border: 2px solid rgb(23, 9, 9);
   border-radius: 10px;
   padding: 10px;
@@ -15,18 +15,19 @@
 }
 */
 
-.user_location {
-  font-size: 10px;
+.fieldset_row:before {
+  content: "";
+  display: block;
+  height: 0;
+  border-top: 1px solid rgb(53, 11, 11);
+  margin: -1px -10px 0;
 }
 
 .tableHeader_PlayerInfo {
-  font-size: 15px;
+  font-size: 20px;
   text-align: left;
-
-  color: white;
 }
 
-/*
 .table_button_wrapper {
   align-items: center;
   color: red;
@@ -37,7 +38,7 @@
   width: 7%;
   margin-top: 4px;
 }
-*/
+
 .playerInfo_h2 {
   font-weight: 600;
 }
