@@ -1,7 +1,8 @@
 import { NextPage } from "next"
 import styles from "p-components/styles/playerInfo.module.css"
-//import Image from "next/image"
-//import heartimage from "../public/heartimage.png"
+import Image from "next/image"
+import heartimage from "../public/heartimage.png"
+import { useState } from "react"
 
 interface Props {}
 

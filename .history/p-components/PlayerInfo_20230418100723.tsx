@@ -1,11 +1,18 @@
 import { NextPage } from "next"
 import styles from "p-components/styles/playerInfo.module.css"
-//import Image from "next/image"
-//import heartimage from "../public/heartimage.png"
+import Image from "next/image"
+import heartimage from "../public/heartimage.png"
+import { useState } from "react"
 
-interface Props {}
+interface Props {
+  name: string
+  infoPost: string
+  discord: string
+}
 
 const Body: NextPage<Props> = ({}) => {
+  const [user, setUser] = useState<Props>()
+
   //Fetch database
   //Render out info
 
@@ -47,12 +54,12 @@ const Body: NextPage<Props> = ({}) => {
                     </h2>{" "}
                     <br />
                     <a href="https://discord.com/">
-                      <strong>Discord: Yahya9110</strong>
+                      <strong>Discord</strong>
                     </a>
                     <br />
                     <a href="https://store.steampowered.com//">
                       {" "}
-                      <strong>Steam: Yahya9110</strong>
+                      <strong>Steam</strong>
                     </a>
                   </nav>
                 </div>

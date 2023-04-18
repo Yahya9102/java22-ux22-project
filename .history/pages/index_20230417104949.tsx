@@ -12,7 +12,7 @@ const Index: NextPage<Props> = ({}) => {
       <h1 className=" text-center">
         <strong>Posts</strong>
       </h1>
-      <PlayerInfo />
+      <PlayerInfo name={""} infoPost={""} discord={""} />
       <MainFooter />
     </div>
   )

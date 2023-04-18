@@ -1,13 +1,25 @@
 import { NextPage } from "next"
 import styles from "p-components/styles/playerInfo.module.css"
-//import Image from "next/image"
-//import heartimage from "../public/heartimage.png"
+import Image from "next/image"
+import heartimage from "../public/heartimage.png"
+import { useState } from "react"
+import { createClient } from "@supabase/supabase-js"
 
-interface Props {}
+interface Props {
+  name: string
+  infoPost: string
+  discord: string
+}
 
 const Body: NextPage<Props> = ({}) => {
+  const [user, setUser] = useState<Props>()
+
   //Fetch database
   //Render out info
+
+  const supabaseUrl = "https://zwlaxzjxzsvbulcvtkqu.supabase.co"
+  const supabaseKey = process.env.rn94k4ppgAZLNBa7
+  const supabase = createClient(supabaseUrl, supabaseKey)
 
   return (
     <div>
@@ -24,7 +36,7 @@ const Body: NextPage<Props> = ({}) => {
               <td>
                 <fieldset className={styles.fieldset_row}>
                   <h2 className={styles.playerInfo_h2}>
-                    Looking for gamingpartner
+                    Hi this is the headline
                   </h2>
                   <br />
                   <p>
@@ -47,12 +59,12 @@ const Body: NextPage<Props> = ({}) => {
                     </h2>{" "}
                     <br />
                     <a href="https://discord.com/">
-                      <strong>Discord: Yahya9110</strong>
+                      <strong>Discord</strong>
                     </a>
                     <br />
                     <a href="https://store.steampowered.com//">
                       {" "}
-                      <strong>Steam: Yahya9110</strong>
+                      <strong>Steam</strong>
                     </a>
                   </nav>
                 </div>

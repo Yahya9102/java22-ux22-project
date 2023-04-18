@@ -9,10 +9,10 @@ const Index: NextPage<Props> = ({}) => {
   return (
     <div>
       <Header />
-      <h1 className=" text-center">
+      <h1 className=" justify-center">
         <strong>Posts</strong>
       </h1>
-      <PlayerInfo />
+      <PlayerInfo name={""} infoPost={""} discord={""} />
       <MainFooter />
     </div>
   )

@@ -1,13 +1,40 @@
 import { NextPage } from "next"
 import styles from "p-components/styles/playerInfo.module.css"
-//import Image from "next/image"
-//import heartimage from "../public/heartimage.png"
+import Image from "next/image"
+import heartimage from "../public/heartimage.png"
+import { useState, useEffect } from "react"
+import mongodb, { MongoClient } from "mongodb"
+
+interface User {
+  _id: string
+  title: string
+  name: string
+  infoPost: string
+  discord: string
+}
 
 interface Props {}
 
 const Body: NextPage<Props> = ({}) => {
-  //Fetch database
-  //Render out info
+  const [users, setUsers] = useState<User[]>([])
+
+  const getUsers = async () => {
+    const client = new MongoClient("mongodb://localhost:27017")
+    try {
+      await client.connect()
+      const db = client.db("GameMatch")
+      const users = await db.collection("users").find().toArray()
+      setUsers(users)
+    } catch (error) {
+      console.error(error)
+    } finally {
+      await client.close()
+    }
+  }
+
+  useEffect(() => {
+    getUsers()
+  }, [])
 
   return (
     <div>
@@ -20,23 +47,17 @@ const Body: NextPage<Props> = ({}) => {
           </thead>
 
           <tbody>
-            <tr>
-              <td>
-                <fieldset className={styles.fieldset_row}>
-                  <h2 className={styles.playerInfo_h2}>
-                    Looking for gamingpartner
-                  </h2>
-                  <br />
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Nobis, tenetur, nihil aliquam unde eveniet eius tempore
-                    consequuntur enim voluptatibus numquam laboriosam
-                    exercitationem in. Eum, nam odit accusantium dignissimos
-                    iusto quidem.
-                  </p>
-                </fieldset>
-              </td>
-            </tr>
+            {users.map((user) => (
+              <tr key={user._id}>
+                <td>
+                  <fieldset className={styles.fieldset_row}>
+                    <h2 className={styles.playerInfo_h2}>{user.title}</h2>
+                    <br />
+                    <p>{user.infoPost}</p>
+                  </fieldset>
+                </td>
+              </tr>
+            ))}
             <tr>
               <td>
                 <div>
@@ -46,19 +67,19 @@ const Body: NextPage<Props> = ({}) => {
                       <strong>Contact</strong>
                     </h2>{" "}
                     <br />
-                    <a href="https://discord.com/">
-                      <strong>Discord: Yahya9110</strong>
+                    <a href={`https://discord.com/${users[0]?.discord}`}>
+                      <strong>Discord</strong>
                     </a>
                     <br />
                     <a href="https://store.steampowered.com//">
                       {" "}
-                      <strong>Steam: Yahya9110</strong>
+                      <strong>Steam</strong>
                     </a>
                   </nav>
                 </div>
               </td>
             </tr>
-            {/**   <tr>
+            {/* <tr>
               <td>
                 <div className={styles.table_button_wrapper}>
                   <Image
