@@ -2,6 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
 .form_body {
   background-color: #f5f5f5;
+  width: 100vw;
+  height: 100vh;
 }
 
 .input_fields {
@@ -11,6 +13,7 @@
   margin: 10px;
   font-family: "Space Grotesk";
   padding-left: 5px;
+  margin-left: 1px;
 }
 
 .input_label {

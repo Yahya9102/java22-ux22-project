@@ -69,7 +69,6 @@ const CreatePost: NextPage<Props> = ({}) => {
             <br />
             <input type="text" name="username" id="" placeholder="Ex:@user01" />
           </div>
-          <br />
           <button type="submit" className={styles.createpost_button}>
             Post
           </button>

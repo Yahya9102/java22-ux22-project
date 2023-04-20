@@ -12,7 +12,11 @@ function MainFooter() {
               console.log("Click")
             }}
           >
-            <img src="./Group8.png" alt="" className={styles.image_post} />
+            <img
+              src="./Group8.png"
+              alt=""
+              className={styles.image_background}
+            />
           </button>
         </div>
       </footer>

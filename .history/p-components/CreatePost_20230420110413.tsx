@@ -59,17 +59,16 @@ const CreatePost: NextPage<Props> = ({}) => {
           <br />
           <p>Add your discord channel for contact</p>
           <br />
-          <div>
-            <label htmlFor="discord">Discord</label>
 
-            <br />
-            <input type="text" name="discord" id="" placeholder="Ex:Discord" />
-            <br />
-            <label htmlFor="username">Username</label>
-            <br />
-            <input type="text" name="username" id="" placeholder="Ex:@user01" />
-          </div>
+          <label htmlFor="discord">Discord</label>
+
           <br />
+          <input type="text" name="discord" id="" placeholder="Ex:Discord" />
+          <br />
+          <label htmlFor="username">Username</label>
+          <br />
+          <input type="text" name="username" id="" placeholder="Ex:@user01" />
+
           <button type="submit" className={styles.createpost_button}>
             Post
           </button>

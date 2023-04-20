@@ -7,12 +7,10 @@ interface Props {}
 
 const Header: NextPage<Props> = ({}) => {
   return (
-    <div>
-      <header className={styles.header_body}>
+    <div className={styles.header_body}>
+      <header>
         <div className={styles.menu_title}>
-          <h1>
-            <strong>GameMatch</strong>
-          </h1>
+          <strong>GameMatch</strong>
         </div>
       </header>
     </div>

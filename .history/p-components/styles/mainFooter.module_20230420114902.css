@@ -17,5 +17,3 @@
 .image_post {
   filter: none;
 }
-
-/*filter: none | blur() | brightness() | contrast() | drop-shadow() | grayscale() | hue-rotate() | invert() | opacity() | saturate() | sepia() | url() | initial | inherit;*/
