@@ -1,7 +1,7 @@
 import { NextPage } from "next"
 import Image from "next/image"
 import styles from "./styles/header.module.css"
-import burgermenu from "../media/hamburger-menu.png"
+// import "../media/hamburger-menu.png"
 
 interface Props {}
 
@@ -10,11 +10,11 @@ const Header: NextPage<Props> = ({}) => {
     <div className={styles.header_body}>
       <header className={styles.header}>
         <div className={styles.menu_icon_div}>
-          <Image
-            src={burgermenu}
+          {/* <Image
+            src={"../media/hamburger-menu.png"}
             alt={"#"}
             className={styles.menu_icon}
-          ></Image>
+          ></Image> */}
         </div>
         <div className={styles.menu_title}>
           <h1>
