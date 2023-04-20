@@ -6,7 +6,7 @@ function MainFooter() {
   const router = useRouter()
 
   const handleCreateButtonClick = () => {
-    router.push("/createUser")
+    router.push("/CreatePost.tsx")
   }
 
   return (

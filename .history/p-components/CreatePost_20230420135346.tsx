@@ -2,11 +2,18 @@ import { NextPage } from "next"
 import { useRouter } from "next/router"
 import { useState } from "react"
 import styles from "p-components/styles/createPost.module.css"
-import { User } from "@/types/users"
+
+interface PostData {
+  name: string
+  title: string
+  post: string
+  discord: string
+  location: string
+}
 
 const CreatePost: NextPage = () => {
   const router = useRouter()
-  const [postData, setPostData] = useState<User>({
+  const [postData, setPostData] = useState<PostData>({
     name: "",
     title: "",
     post: "",
