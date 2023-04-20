@@ -13,7 +13,7 @@ const Index: NextPage<Props> = ({}) => {
         <strong>Posts</strong>
       </h1>
       <CreatePost />
-
+      <PlayerInfo />
       {/* <PlayerInfo /> */}
       <MainFooter />
     </div>
