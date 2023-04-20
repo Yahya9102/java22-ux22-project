@@ -1,7 +1,7 @@
 import { NextPage } from "next"
 import Image from "next/image"
 import styles from "./styles/header.module.css"
-import "../media/hamburger-menu.png"
+// import "../media/hamburger-menu.png"
 
 interface Props {}
 
