@@ -10,7 +10,7 @@ function MainFooter() {
   }
 
   return (
-    <div>
+    <div className="mx-10">
       <footer className={styles.main_footer}>
         <button type="submit" onClick={handleCreateButtonClick}>
           <img src="./Post icon.png" alt="" className={styles.image_post} />

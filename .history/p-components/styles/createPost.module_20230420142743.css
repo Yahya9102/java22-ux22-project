@@ -49,8 +49,7 @@
 
 .input_fields_contact {
   border: solid 2px;
-  width: 45vw;
-  height: 8vh;
+  width: 30vw;
   border-radius: 10px;
   margin: 10px;
   font-family: "Space Grotesk";
@@ -59,8 +58,4 @@
 
 .contact_info_label {
   padding-left: 10px;
-}
-
-.contact_frames {
-  display: flex;
 }

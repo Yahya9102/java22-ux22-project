@@ -81,7 +81,7 @@ const CreatePost: NextPage = () => {
     <div>
       <fieldset className={styles.form_body}>
         <p onClick={handleGoBackClick} className={styles.link_P}>
-          <strong>Go back</strong>
+          Go back
         </p>
         <form onSubmit={handlePostSubmit}>
           <label htmlFor="name" className={styles.input_label}>

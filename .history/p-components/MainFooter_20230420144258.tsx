@@ -12,9 +12,11 @@ function MainFooter() {
   return (
     <div>
       <footer className={styles.main_footer}>
-        <button type="submit" onClick={handleCreateButtonClick}>
-          <img src="./Post icon.png" alt="" className={styles.image_post} />
-        </button>
+        <div className={styles.footer_button}>
+          <button type="submit" onClick={handleCreateButtonClick}>
+            <img src="./Post icon.png" alt="" className={styles.image_post} />
+          </button>
+        </div>
       </footer>
     </div>
   )

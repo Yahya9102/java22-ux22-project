@@ -57,11 +57,10 @@ const Body: NextPage<Props> = ({}) => {
                         <br />
                         <h2 className={styles.playerInfo_h2}>Contact</h2>
                         <br />
-                        <a
-                          href={`discord://discordapp.com/users/${user.discord}`}
-                        >
+                        <a href="https://discord.com/">
                           <p className={styles.playerInfo_p}>
-                            <strong>Discord:</strong> {user.discord}
+                            {" "}
+                            <strong> Discord:</strong> {user.discord}
                           </p>
                         </a>
                       </nav>

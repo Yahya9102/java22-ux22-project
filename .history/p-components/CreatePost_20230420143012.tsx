@@ -81,7 +81,7 @@ const CreatePost: NextPage = () => {
     <div>
       <fieldset className={styles.form_body}>
         <p onClick={handleGoBackClick} className={styles.link_P}>
-          <strong>Go back</strong>
+          Go back
         </p>
         <form onSubmit={handlePostSubmit}>
           <label htmlFor="name" className={styles.input_label}>
@@ -142,17 +142,17 @@ const CreatePost: NextPage = () => {
           </p>
           <br />
 
-          <div className={styles.contact_frames}>
+          <div>
             <div>
               <label htmlFor="discord" className={styles.contact_info_label}>
-                <strong>Discord</strong>
+                Discord
               </label>
               <br />{" "}
               <input
                 type="text"
                 name="discord"
                 id=""
-                placeholder="Ex: Username#0000"
+                placeholder="Ex:Discord"
                 onChange={handleDiscordChange}
                 value={postData.discord}
                 className={styles.input_fields_contact}
@@ -160,7 +160,7 @@ const CreatePost: NextPage = () => {
             </div>
             <div>
               <label htmlFor="location" className={styles.contact_info_label}>
-                <strong>Location</strong>
+                Location
               </label>
               <br />
               <input
@@ -178,7 +178,7 @@ const CreatePost: NextPage = () => {
           <br />
           <div className={styles.button_div}>
             <button type="submit" className={styles.createpost_button}>
-              <strong>Post</strong>
+              Post
             </button>
           </div>
         </form>
