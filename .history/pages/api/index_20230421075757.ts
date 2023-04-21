@@ -35,7 +35,7 @@ export default async function handler(
       default: {
         // Return a 405 Method Not Allowed error for all other HTTP methods
         //res.setHeader("Access-Control-Allow-Origin", "*")
-        res.setHeader("Allow", "GET")
+        res.setHeader("Allow", "GET", "Access-Control-Allow-Origin", "*")
         res.status(405).end(`Method ${req.method} Not Allowed`)
         break
       }
