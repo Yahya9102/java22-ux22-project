@@ -15,13 +15,7 @@ function MainFooter() {
     <div>
       <nav className={styles.main_footer}>
         <button type="submit" onClick={handleCreateButtonClick}>
-          <Image
-            src={navbarImage}
-            alt=""
-            width={64}
-            height={64}
-            className={styles.image_post}
-          />
+          <Image src={navbarImage} alt="" className={styles.image_post} />
         </button>
       </nav>
     </div>
