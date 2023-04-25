@@ -47,6 +47,12 @@ const admin: NextPage = ({}) => {
       }
     }
   }
+
+  // A button for changing/editing a post
+  const handleChangeClick = async (_id: string) => {
+    console.log("Testing, testing 1,2,3")
+  }
+
   return (
     <div>
       {Array.isArray(users) &&
@@ -101,6 +107,12 @@ const admin: NextPage = ({}) => {
                       className={styles.createpost_button}
                     >
                       Delete
+                    </button>
+                    <button
+                      className={styles.createpost_button}
+                      onClick={() => handleChangeClick(user._id.toString())}
+                    >
+                      Edit
                     </button>
                   </td>
                 </tr>
