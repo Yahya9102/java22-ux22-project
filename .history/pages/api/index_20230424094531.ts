@@ -4,7 +4,7 @@ import { User } from "@/types/users"
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<User[] | string>
+  res: NextApiResponse<User | User[] | string>
 ) {
   try {
     const db = await connectToDatabase()
@@ -29,7 +29,6 @@ export default async function handler(
         if (convertedUsers.length === 0) {
           res.status(200).json("EMPTY")
         } else {
-          res.setHeader("Access-Control-Allow-Origin", "*")
           res.status(200).json(convertedUsers)
         }
         break

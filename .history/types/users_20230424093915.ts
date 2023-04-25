@@ -4,5 +4,5 @@ export type User = {
   discord: string
   post: string
   location: string
-  _id: string
+  _id: any
 }
