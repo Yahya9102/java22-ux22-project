@@ -53,7 +53,7 @@ const admin: NextPage = ({}) => {
   // A button for opening form for editing a post
   const handleChangeClick = async (_id: string) => {
     console.log("Testing")
-    setShowForm(true)
+    // setShowForm(true)
   }
 
   // A button for closing form for editing a post
@@ -121,7 +121,7 @@ const admin: NextPage = ({}) => {
                     >
                       Edit
                     </button>
-                    {showForm && (
+                    {/* {showForm && (
                       <div>
                         <div>
                           <h2>Edit existing post</h2>
@@ -140,7 +140,7 @@ const admin: NextPage = ({}) => {
                           <button onClick={handleChangeClose}>X</button>
                         </div>
                       </div>
-                    )}
+                    )} */}
                   </td>
                 </tr>
               </tbody>
