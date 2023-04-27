@@ -1,15 +1,13 @@
 import { NextPage } from "next"
 import LoadingPage from "@/p-components/loadingPage"
 
-const startPage: NextPage = ({}) => {
-  return (
-    <div>
-      <LoadingPage />
-    </div>
-  )
+interface Props {}
+
+const Index: NextPage<Props> = ({}) => {
+  return <div></div>
 }
 
-export default startPage
+export default Index
 
 // import { NextPage } from "next"
 // import LoadingPage from "@/p-components/loadingPage"
