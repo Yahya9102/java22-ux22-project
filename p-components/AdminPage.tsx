@@ -45,9 +45,18 @@ const admin: NextPage = ({}) => {
     }
   }
 
-  // A button for changing/editing a post
+  const [showForm, setShowForm] = useState(false)
+
+  // A button for opening form for editing a post
   const handleChangeClick = async (_id: string) => {
-    console.log("Testing, testing 1,2,3")
+    console.log("Testing")
+    // setShowForm(true)
+  }
+
+  // A button for closing form for editing a post
+  const handleChangeClose = () => {
+    console.log("Testing")
+    setShowForm(false)
   }
 
   return (
@@ -98,9 +107,7 @@ const admin: NextPage = ({}) => {
                   <td>
                     <p>ID: {JSON.stringify(user._id)}</p>
                     <button
-                      onClick={() =>
-                        handleDeleteClick(Buffer.from(user._id).toString())
-                      }
+                      onClick={() => handleDeleteClick(user._id.toString())}
                       className={styles.createpost_button}
                     >
                       Delete
@@ -111,6 +118,26 @@ const admin: NextPage = ({}) => {
                     >
                       Edit
                     </button>
+                    {/* {showForm && (
+                      <div>
+                        <div>
+                          <h2>Edit existing post</h2>
+                          <form>
+                            <label htmlFor="editName">Change name:</label>
+                            <br />
+                            <input
+                              type="text"
+                              name="editName"
+                              id="editName"
+                              placeholder="You wanna change the name?"
+                            />
+                            <br />
+                            <button type="submit">Change Post</button>
+                          </form>
+                          <button onClick={handleChangeClose}>X</button>
+                        </div>
+                      </div>
+                    )} */}
                   </td>
                 </tr>
               </tbody>
