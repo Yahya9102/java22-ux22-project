@@ -13,7 +13,7 @@ const guidelinePage: NextPage = () => {
     <div className={styles.guidelinePage_body}>
       <div className={styles.guidelinePage_Top}>
         <h1 className={styles.h1}>
-          YAY! We're excited to have you onboard! {"'<3'"}
+          YAY! We're excited to have you onboard! ´<3´
         </h1>
       </div>
       <div className={styles.onionImage}>
