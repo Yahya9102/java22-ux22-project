@@ -99,8 +99,7 @@
 .guideline_fieldset_bottom {
   border: 2px solid white;
   color: white;
-  width: 80%;
-  border-radius: 20px;
+  width: 70vw;
 }
 
 .fieldset_div {
@@ -111,22 +110,7 @@
 }
 
 .fieldset_p {
-  padding: 5%;
-}
-
-.button {
-  background-color: #ceff42;
-  width: 11em;
-  height: 3.5rem;
-  border-radius: 50px;
-  border: solid 2px #1e1e1e;
-  font-size: 24px;
-  font-weight: 500;
-}
-.button_div {
+  width: 90%;
+  height: 90%;
   padding: 10%;
-
-  display: flex;
-  justify-content: left;
-  margin-left: 5rem;
 }

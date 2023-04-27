@@ -6,7 +6,7 @@ import casperWithFace from "/public/casperWithFace.png"
 import router from "next/router"
 const GuidelinePage: NextPage = () => {
   const redirectoIndex = () => {
-    router.push("/")
+    router.push("/index")
   }
 
   return (

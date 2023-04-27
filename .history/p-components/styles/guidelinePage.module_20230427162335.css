@@ -97,36 +97,8 @@
 }
 
 .guideline_fieldset_bottom {
-  border: 2px solid white;
   color: white;
   width: 80%;
-  border-radius: 20px;
-}
-
-.fieldset_div {
-  display: flex;
-  padding-top: 10%;
-  align-items: center;
-  justify-content: center;
-}
-
-.fieldset_p {
-  padding: 5%;
-}
-
-.button {
-  background-color: #ceff42;
-  width: 11em;
-  height: 3.5rem;
-  border-radius: 50px;
-  border: solid 2px #1e1e1e;
-  font-size: 24px;
-  font-weight: 500;
-}
-.button_div {
-  padding: 10%;
-
-  display: flex;
-  justify-content: left;
-  margin-left: 5rem;
+  padding-left: 20%;
+  border: 1px solid white;
 }

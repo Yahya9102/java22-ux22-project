@@ -124,7 +124,7 @@
   font-weight: 500;
 }
 .button_div {
-  padding: 10%;
+  padding-top: 2.5rem;
 
   display: flex;
   justify-content: left;

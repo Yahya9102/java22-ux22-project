@@ -111,22 +111,5 @@
 }
 
 .fieldset_p {
-  padding: 5%;
-}
-
-.button {
-  background-color: #ceff42;
-  width: 11em;
-  height: 3.5rem;
-  border-radius: 50px;
-  border: solid 2px #1e1e1e;
-  font-size: 24px;
-  font-weight: 500;
-}
-.button_div {
   padding: 10%;
-
-  display: flex;
-  justify-content: left;
-  margin-left: 5rem;
 }

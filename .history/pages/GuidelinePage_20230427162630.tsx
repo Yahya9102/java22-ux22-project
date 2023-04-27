@@ -3,12 +3,7 @@ import Image from "next/image"
 import styles from "/p-components/styles/guidelinePage.module.css"
 import guidelineOnion from "/public/guidelineOnion.png"
 import casperWithFace from "/public/casperWithFace.png"
-import router from "next/router"
 const GuidelinePage: NextPage = () => {
-  const redirectoIndex = () => {
-    router.push("/")
-  }
-
   return (
     <div className={styles.guidelinePage_body}>
       <div className={styles.guidelinePage_Top}>
@@ -80,11 +75,6 @@ const GuidelinePage: NextPage = () => {
             will result in your post being deleted and a warning.
           </p>
         </fieldset>
-      </div>
-      <div className={styles.button_div}>
-        <button onClick={redirectoIndex} className={styles.button}>
-          Get started!
-        </button>
       </div>
     </div>
   )

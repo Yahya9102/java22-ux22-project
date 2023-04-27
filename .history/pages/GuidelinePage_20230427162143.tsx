@@ -3,12 +3,7 @@ import Image from "next/image"
 import styles from "/p-components/styles/guidelinePage.module.css"
 import guidelineOnion from "/public/guidelineOnion.png"
 import casperWithFace from "/public/casperWithFace.png"
-import router from "next/router"
 const GuidelinePage: NextPage = () => {
-  const redirectoIndex = () => {
-    router.push("/")
-  }
-
   return (
     <div className={styles.guidelinePage_body}>
       <div className={styles.guidelinePage_Top}>
@@ -71,21 +66,14 @@ const GuidelinePage: NextPage = () => {
           let your personality shine through.
         </p>
       </div>
-      <div className={styles.fieldset_div}>
-        <fieldset className={styles.guideline_fieldset_bottom}>
-          <p className={styles.fieldset_p}>
-            We stand firmly against hate speech of any kind. Failure in treating
-            our community users with respect or engaging in either racism,
-            homophobia, ableism, sexism or any other kind of discrimination,
-            will result in your post being deleted and a warning.
-          </p>
-        </fieldset>
-      </div>
-      <div className={styles.button_div}>
-        <button onClick={redirectoIndex} className={styles.button}>
-          Get started!
-        </button>
-      </div>
+      <fieldset className={styles.guideline_fieldset_bottom}>
+        <p className={styles.guideline_p_center}>
+          We stand firmly against hate speech of any kind. Failure in treating
+          our community users with respect or engaging in either racism,
+          homophobia, ableism, sexism or any other kind of discrimination, will
+          result in your post being deleted and a warning.
+        </p>
+      </fieldset>
     </div>
   )
 }

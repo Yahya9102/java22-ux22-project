@@ -3,10 +3,9 @@ import Image from "next/image"
 import styles from "/p-components/styles/guidelinePage.module.css"
 import guidelineOnion from "/public/guidelineOnion.png"
 import casperWithFace from "/public/casperWithFace.png"
-import router from "next/router"
 const GuidelinePage: NextPage = () => {
-  const redirectoIndex = () => {
-    router.push("/")
+  const redirectToGuideline = () => {
+    router.push("/GuidelinePage")
   }
 
   return (
@@ -81,11 +80,9 @@ const GuidelinePage: NextPage = () => {
           </p>
         </fieldset>
       </div>
-      <div className={styles.button_div}>
-        <button onClick={redirectoIndex} className={styles.button}>
-          Get started!
-        </button>
-      </div>
+      <button onClick={redirectToGuideline} className={styles.button}>
+        Get started!
+      </button>
     </div>
   )
 }

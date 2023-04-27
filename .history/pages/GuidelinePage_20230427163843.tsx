@@ -6,7 +6,7 @@ import casperWithFace from "/public/casperWithFace.png"
 import router from "next/router"
 const GuidelinePage: NextPage = () => {
   const redirectoIndex = () => {
-    router.push("/")
+    router.push("/index")
   }
 
   return (
@@ -81,7 +81,8 @@ const GuidelinePage: NextPage = () => {
           </p>
         </fieldset>
       </div>
-      <div className={styles.button_div}>
+      <div>
+        {" "}
         <button onClick={redirectoIndex} className={styles.button}>
           Get started!
         </button>

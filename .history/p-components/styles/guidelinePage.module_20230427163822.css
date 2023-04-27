@@ -122,11 +122,5 @@
   border: solid 2px #1e1e1e;
   font-size: 24px;
   font-weight: 500;
-}
-.button_div {
-  padding: 10%;
-
-  display: flex;
-  justify-content: left;
-  margin-left: 5rem;
+  padding-top: 20%;
 }

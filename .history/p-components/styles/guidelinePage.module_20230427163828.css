@@ -123,10 +123,3 @@
   font-size: 24px;
   font-weight: 500;
 }
-.button_div {
-  padding: 10%;
-
-  display: flex;
-  justify-content: left;
-  margin-left: 5rem;
-}
