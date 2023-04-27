@@ -2,7 +2,7 @@ import { NextPage } from "next"
 import styles from "p-components/styles/playerInfo.module.css"
 import { useEffect, useState } from "react"
 import { User } from "@/types/users"
-
+import handler from "@/pages/api/"
 //import Image from "next/image"
 //import heartimage from "../public/heartimage.png"
 
@@ -12,7 +12,7 @@ const Body: NextPage = ({}) => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch("/api/")
+        const response = await fetch("/")
         const data = await response.json()
         if (Array.isArray(data)) {
           setUsers(data)

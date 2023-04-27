@@ -33,7 +33,9 @@ export default async function handler(
         }
         break
       }
-
+      case "Hello": {
+        console.log("Hello")
+      }
       default: {
         // Return a 405 Method Not Allowed error for all other HTTP methods
 

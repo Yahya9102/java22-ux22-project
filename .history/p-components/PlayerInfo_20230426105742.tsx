@@ -2,30 +2,32 @@ import { NextPage } from "next"
 import styles from "p-components/styles/playerInfo.module.css"
 import { useEffect, useState } from "react"
 import { User } from "@/types/users"
-
+import handler from "@/pages/api/"
 //import Image from "next/image"
 //import heartimage from "../public/heartimage.png"
 
 const Body: NextPage = ({}) => {
   const [users, setUsers] = useState<User[]>([])
 
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await fetch("/api/")
-        const data = await response.json()
-        if (Array.isArray(data)) {
-          setUsers(data)
-          console.log(data)
-        } else {
-          console.log("Data is not an array:", data)
-        }
-      } catch (error) {
-        console.error("Error fetching data:", error)
-      }
-    }
-    fetchData()
-  }, [])
+  handler("Get", setUsers)
+
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     try {
+  //       const response = await fetch("/api")
+  //       const data = await response.json()
+  //       if (Array.isArray(data)) {
+  //         setUsers(data)
+  //         console.log(data)
+  //       } else {
+  //         console.log("Data is not an array:", data)
+  //       }
+  //     } catch (error) {
+  //       console.error("Error fetching data:", error)
+  //     }
+  //   }
+  //   fetchData()
+  // }, [])
 
   return (
     <div>

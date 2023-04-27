@@ -2,17 +2,15 @@ import { NextPage } from "next"
 import styles from "p-components/styles/playerInfo.module.css"
 import { useEffect, useState } from "react"
 import { User } from "@/types/users"
+import router from "next/router"
 
-//import Image from "next/image"
-//import heartimage from "../public/heartimage.png"
-
-const Body: NextPage = ({}) => {
+const admin: NextPage = ({}) => {
   const [users, setUsers] = useState<User[]>([])
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch("/api/")
+        const response = await fetch("/api")
         const data = await response.json()
         if (Array.isArray(data)) {
           setUsers(data)
@@ -27,11 +25,39 @@ const Body: NextPage = ({}) => {
     fetchData()
   }, [])
 
+  const handleDeleteClick = async (_id: string) => {
+    const shouldDelete = window.confirm(
+      "Are you sure you want to delete this user?"
+    )
+    console.log(_id)
+    if (shouldDelete) {
+      try {
+        const response = await fetch(`api/deleteUser?userId=${_id}`, {
+          method: "DELETE",
+        })
+        if (!response.ok) {
+          throw new Error("Failed to delete user")
+        }
+        router.reload()
+      } catch (error) {
+        console.error("Error deleting user:", error)
+      }
+    }
+  }
+
+  // A button for changing/editing a post
+  const handleChangeClick = async (_id: string) => {
+    console.log("Testing, testing 1,2,3")
+  }
+
   return (
     <div>
       {Array.isArray(users) &&
         users.map((user) => (
-          <fieldset className={styles.fieldset_body} key={user._id}>
+          <fieldset
+            className={styles.fieldset_body}
+            key={JSON.stringify(user._id)}
+          >
             <table>
               <thead>
                 <tr>
@@ -68,18 +94,25 @@ const Body: NextPage = ({}) => {
                     </div>
                   </td>
                 </tr>
-                {/**   <tr>
-                <td>
-                  <div className={styles.table_button_wrapper}>
-                    <Image
-                      src={heartimage}
-                      className={styles.heartimage}
-                      alt="Heart icon"
-                    />
-                    <button className={styles.table_button}>Reply</button>
-                  </div>
-                </td>
-              </tr> */}
+                <tr>
+                  <td>
+                    <p>ID: {JSON.stringify(user._id)}</p>
+                    <button
+                      onClick={() =>
+                        handleDeleteClick(Buffer.from(user._id).toString())
+                      }
+                      className={styles.createpost_button}
+                    >
+                      Delete
+                    </button>
+                    <button
+                      className={styles.createpost_button}
+                      onClick={() => handleChangeClick(user._id.toString())}
+                    >
+                      Edit
+                    </button>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </fieldset>
@@ -88,4 +121,4 @@ const Body: NextPage = ({}) => {
   )
 }
 
-export default Body
+export default admin

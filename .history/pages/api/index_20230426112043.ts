@@ -33,7 +33,6 @@ export default async function handler(
         }
         break
       }
-
       default: {
         // Return a 405 Method Not Allowed error for all other HTTP methods
 

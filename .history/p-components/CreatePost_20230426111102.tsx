@@ -57,7 +57,7 @@ const CreatePost: NextPage = () => {
   const handlePostSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     try {
-      const response = await fetch("/api/newUser", {
+      const response = await fetch("http://localhost:3000/api/posts", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

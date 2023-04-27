@@ -12,7 +12,11 @@ const Body: NextPage = ({}) => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch("/api/")
+        const response = await fetch("/api/", {
+          headers: {
+            "req.method": "Hello",
+          },
+        })
         const data = await response.json()
         if (Array.isArray(data)) {
           setUsers(data)
