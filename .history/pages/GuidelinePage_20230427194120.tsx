@@ -56,7 +56,7 @@ const guidelinePage: NextPage = () => {
         <h2 className={styles.guideline_h2}>Show care</h2>
         <p>
           Our community is diverse, which means others may have different
-          thoughts and opinions. Lets celebrate these differences with empathy
+          thoughts and opinions. Let's celebrate these differences with empathy
           and an open mind!
         </p>
       </div>
@@ -64,7 +64,7 @@ const guidelinePage: NextPage = () => {
         <h2 className={styles.guideline_h2}>Share with others</h2>
 
         <p className={styles.guideline_p_center}>
-          Do not be afraid to show your true self and share your passion- it is
+          Don't be afraid to show your true self and share your passion- it's
           the best way to make lasting connections with others. So go ahead and
           let your personality shine through.
         </p>

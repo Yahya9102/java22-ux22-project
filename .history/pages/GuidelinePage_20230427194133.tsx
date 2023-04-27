@@ -64,7 +64,7 @@ const guidelinePage: NextPage = () => {
         <h2 className={styles.guideline_h2}>Share with others</h2>
 
         <p className={styles.guideline_p_center}>
-          Do not be afraid to show your true self and share your passion- it is
+          Do not be afraid to show your true self and share your passion- it's
           the best way to make lasting connections with others. So go ahead and
           let your personality shine through.
         </p>
