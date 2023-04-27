@@ -28,14 +28,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80%;
-  height: 80%;
-  padding-left: 3rem;
+  z-index: -0;
 }
 .onionText {
   color: white;
   display: flex;
-  width: 100%;
+  width: 90%;
   height: 100%;
   align-items: center;
   justify-content: center;

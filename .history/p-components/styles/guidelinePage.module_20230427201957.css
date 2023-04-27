@@ -26,11 +26,9 @@
 .onionImage {
   padding-top: 3rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
+
   width: 80%;
   height: 80%;
-  padding-left: 3rem;
 }
 .onionText {
   color: white;
