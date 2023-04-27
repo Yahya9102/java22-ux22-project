@@ -1,23 +1,12 @@
 import { NextPage } from "next"
-import PlayerInfo from "@/p-components/PlayerInfo"
-import MainFooter from "@/p-components/MainFooter"
-import Header from "@/p-components/header"
-import { User } from "@/types/users"
-import Breaks from "@/p-components/breaks"
-
-const Index: NextPage<User> = ({}) => {
+import LoadingPage from "@/p-components/loadingPage"
+import GuidelinePage from "@/pages/GuidelinePage"
+const startPage: NextPage = ({}) => {
   return (
     <div>
-      <Header />
-      <h1 className="text-center">
-        <strong>Posts</strong>
-      </h1>
-
-      <PlayerInfo />
-      <Breaks />
-      <MainFooter />
+      <LoadingPage />
     </div>
   )
 }
 
-export default Index
+export default startPage
