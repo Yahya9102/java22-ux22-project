@@ -9,7 +9,7 @@ import router from "next/router"
 
 const LoadingPage: NextPage = ({}) => {
   const redirectToGuideline = () => {
-    router.push("/guidelinePage")
+    router.push("/GuidelinePage")
   }
 
   return (
