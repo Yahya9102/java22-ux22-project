@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import { User } from "@/types/users"
 import router from "next/router"
 import Breaks from "./breaks"
-import styles from "p-components/styles/playerInfo.module.css"
+import styles from "p-components/styles/playerinfo.module.css"
 
 const admin: NextPage = ({}) => {
   const [users, setUsers] = useState<User[]>([])
@@ -96,12 +96,12 @@ const admin: NextPage = ({}) => {
         />
 
         <br />
-        <label className={style.label} htmlFor="adminPassword">
+        <label className={styles.label} htmlFor="adminPassword">
           Admin Password:
         </label>
         <br />
         <input
-          className={styles.input_fields}
+          className={style.input_fields}
           type="password"
           name="adminPassword"
           id="adminPassword"
