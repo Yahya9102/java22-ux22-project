@@ -54,10 +54,7 @@ const admin: NextPage = ({}) => {
     }
   }
 
-  //this is for the playerinfos below
   const [showForm, setShowForm] = useState(false)
-
-  // this is for the loging to dissappear
   const [showLogin, setShowLogin] = useState(true)
 
   const hideLoging = () => {

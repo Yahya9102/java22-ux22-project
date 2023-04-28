@@ -54,10 +54,7 @@ const admin: NextPage = ({}) => {
     }
   }
 
-  //this is for the playerinfos below
   const [showForm, setShowForm] = useState(false)
-
-  // this is for the loging to dissappear
   const [showLogin, setShowLogin] = useState(true)
 
   const hideLoging = () => {
@@ -83,38 +80,43 @@ const admin: NextPage = ({}) => {
 
   return (
     <div>
-      <fieldset>
-        <label htmlFor="adminUsername">Admin Username:</label>
-        <br />
-        <input
-          className={style.input_fields}
-          type="text"
-          name="adminUsername"
-          id="adminUsername"
-          value={adminUsername}
-          onChange={(e) => setAdminUsername(e.target.value)}
-          placeholder="Username"
-        />
+      <div>
+        <fieldset>
+          <label htmlFor="adminUsername">Admin Username:</label>
+          <br />
+          <input
+            className={style.input_fields}
+            type="text"
+            name="adminUsername"
+            id="adminUsername"
+            value={adminUsername}
+            onChange={(e) => setAdminUsername(e.target.value)}
+            placeholder="Username"
+          />
 
-        <br />
-        <label className={styles.label} htmlFor="adminPassword">
-          Admin Password:
-        </label>
-        <br />
-        <input
-          className={style.input_fields}
-          type="password"
-          name="adminPassword"
-          id="adminPassword"
-          value={adminPassword}
-          onChange={(e) => setAdminPassword(e.target.value)}
-          placeholder="password"
-        />
-        <br />
-        <button className={styles.createpost_button} onClick={handleLoginClick}>
-          Login
-        </button>
-      </fieldset>
+          <br />
+          <label className={styles.label} htmlFor="adminPassword">
+            Admin Password:
+          </label>
+          <br />
+          <input
+            className={style.input_fields}
+            type="password"
+            name="adminPassword"
+            id="adminPassword"
+            value={adminPassword}
+            onChange={(e) => setAdminPassword(e.target.value)}
+            placeholder="password"
+          />
+          <br />
+          <button
+            className={styles.createpost_button}
+            onClick={handleLoginClick}
+          >
+            Login
+          </button>
+        </fieldset>
+      </div>
 
       {showForm &&
         Array.isArray(users) &&
