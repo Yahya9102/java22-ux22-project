@@ -51,7 +51,7 @@ const CreatePost: NextPage = () => {
   }
 
   const handleGoBackClick = () => {
-    router.push("/")
+    router.push("/startPage")
   }
 
   const handlePostSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
