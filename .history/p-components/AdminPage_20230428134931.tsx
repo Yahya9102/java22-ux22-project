@@ -1,5 +1,5 @@
 import { NextPage } from "next"
-import style from "p-components/styles/adminPage.module.css"
+// import style from "p-components/styles/adminPage.module.css"
 import { useEffect, useState } from "react"
 import { User } from "@/types/users"
 import router from "next/router"
@@ -86,7 +86,7 @@ const admin: NextPage = ({}) => {
         <label htmlFor="adminUsername">Admin Username:</label>
         <br />
         <input
-          className={style.input_fields}
+          className={styles.input_fields}
           type="text"
           name="adminUsername"
           id="adminUsername"
@@ -96,7 +96,7 @@ const admin: NextPage = ({}) => {
         />
 
         <br />
-        <label className={style.label} htmlFor="adminPassword">
+        <label className={styles.label} htmlFor="adminPassword">
           Admin Password:
         </label>
         <br />
