@@ -1,16 +1,15 @@
 import { NextPage } from "next"
-import styles from "p-components/styles/adminPage.module.css"
+import styles from "p-components/styles/playerInfo.module.css"
 import { useEffect, useState } from "react"
 import { User } from "@/types/users"
 import router from "next/router"
 import Breaks from "./breaks"
 
+const ADMIN_USERNAME = "Admin"
+const ADMIN_PASSWORD = "12345"
+
 const admin: NextPage = ({}) => {
   const [users, setUsers] = useState<User[]>([])
-
-  const ADMIN_USERNAME = "Admin"
-  const ADMIN_PASSWORD = "12345"
-
   const [adminUsername, setAdminUsername] = useState("")
   const [adminPassword, setAdminPassword] = useState("")
 
@@ -54,6 +53,7 @@ const admin: NextPage = ({}) => {
 
   const [showForm, setShowForm] = useState(false)
 
+  // A button for opening form for editing a post
   const handleChangeClick = async (_id: string) => {
     console.log("Testing")
     // setShowForm(true)
@@ -75,42 +75,36 @@ const admin: NextPage = ({}) => {
 
   return (
     <div>
-      <div>
-        <fieldset>
-          <label htmlFor="adminUsername">Admin Username:</label>
-          <br />
-          <input
-            className={styles.input_fields}
-            type="text"
-            name="adminUsername"
-            id="adminUsername"
-            value={adminUsername}
-            onChange={(e) => setAdminUsername(e.target.value)}
-            placeholder="Username"
-          />
+      <div className={styles.login}>
+        <label className={styles.label} htmlFor="adminUsername">
+          Admin Username:
+        </label>
+        <br />
+        <input
+          className={styles.input}
+          type="text"
+          name="adminUsername"
+          id="adminUsername"
+          value={adminUsername}
+          onChange={(e) => setAdminUsername(e.target.value)}
+        />
 
-          <br />
-          <label className={styles.label} htmlFor="adminPassword">
-            Admin Password:
-          </label>
-          <br />
-          <input
-            className={styles.input_fields}
-            type="password"
-            name="adminPassword"
-            id="adminPassword"
-            value={adminPassword}
-            onChange={(e) => setAdminPassword(e.target.value)}
-            placeholder="password"
-          />
-          <br />
-          <button
-            className={styles.createpost_button}
-            onClick={handleLoginClick}
-          >
-            Login
-          </button>
-        </fieldset>
+        <label className={styles.label} htmlFor="adminPassword">
+          Admin Password:
+        </label>
+        <br />
+        <input
+          className={styles.input}
+          type="password"
+          name="adminPassword"
+          id="adminPassword"
+          value={adminPassword}
+          onChange={(e) => setAdminPassword(e.target.value)}
+        />
+
+        <button className={styles.createpost_button} onClick={handleLoginClick}>
+          Login
+        </button>
       </div>
 
       {showForm &&

@@ -95,7 +95,6 @@ const admin: NextPage = ({}) => {
           </label>
           <br />
           <input
-            className={styles.input_fields}
             type="password"
             name="adminPassword"
             id="adminPassword"

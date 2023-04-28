@@ -80,7 +80,6 @@ const admin: NextPage = ({}) => {
           <label htmlFor="adminUsername">Admin Username:</label>
           <br />
           <input
-            className={styles.input_fields}
             type="text"
             name="adminUsername"
             id="adminUsername"
@@ -95,7 +94,7 @@ const admin: NextPage = ({}) => {
           </label>
           <br />
           <input
-            className={styles.input_fields}
+            className={styles.input}
             type="password"
             name="adminPassword"
             id="adminPassword"

@@ -76,11 +76,13 @@ const admin: NextPage = ({}) => {
   return (
     <div>
       <div>
-        <fieldset>
-          <label htmlFor="adminUsername">Admin Username:</label>
+        <fieldset className={styles.fieldset}>
+          <label className={styles.label} htmlFor="adminUsername">
+            Admin Username:
+          </label>
           <br />
           <input
-            className={styles.input_fields}
+            className={styles.input}
             type="text"
             name="adminUsername"
             id="adminUsername"
@@ -95,7 +97,7 @@ const admin: NextPage = ({}) => {
           </label>
           <br />
           <input
-            className={styles.input_fields}
+            className={styles.input}
             type="password"
             name="adminPassword"
             id="adminPassword"

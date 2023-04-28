@@ -1,5 +1,5 @@
 import { NextPage } from "next"
-import styles from "p-components/styles/adminPage.module.css"
+import styles from "p-components/styles/playerInfo.module.css"
 import { useEffect, useState } from "react"
 import { User } from "@/types/users"
 import router from "next/router"
@@ -7,12 +7,6 @@ import Breaks from "./breaks"
 
 const admin: NextPage = ({}) => {
   const [users, setUsers] = useState<User[]>([])
-
-  const ADMIN_USERNAME = "Admin"
-  const ADMIN_PASSWORD = "12345"
-
-  const [adminUsername, setAdminUsername] = useState("")
-  const [adminPassword, setAdminPassword] = useState("")
 
   useEffect(() => {
     async function fetchData() {
@@ -54,6 +48,7 @@ const admin: NextPage = ({}) => {
 
   const [showForm, setShowForm] = useState(false)
 
+  // A button for opening form for editing a post
   const handleChangeClick = async (_id: string) => {
     console.log("Testing")
     // setShowForm(true)
@@ -65,56 +60,9 @@ const admin: NextPage = ({}) => {
     setShowForm(false)
   }
 
-  const handleLoginClick = () => {
-    if (adminUsername === ADMIN_USERNAME && adminPassword === ADMIN_PASSWORD) {
-      setShowForm(true)
-    } else {
-      alert("Invalid admin username or password")
-    }
-  }
-
   return (
     <div>
-      <div>
-        <fieldset>
-          <label htmlFor="adminUsername">Admin Username:</label>
-          <br />
-          <input
-            className={styles.input_fields}
-            type="text"
-            name="adminUsername"
-            id="adminUsername"
-            value={adminUsername}
-            onChange={(e) => setAdminUsername(e.target.value)}
-            placeholder="Username"
-          />
-
-          <br />
-          <label className={styles.label} htmlFor="adminPassword">
-            Admin Password:
-          </label>
-          <br />
-          <input
-            className={styles.input_fields}
-            type="password"
-            name="adminPassword"
-            id="adminPassword"
-            value={adminPassword}
-            onChange={(e) => setAdminPassword(e.target.value)}
-            placeholder="password"
-          />
-          <br />
-          <button
-            className={styles.createpost_button}
-            onClick={handleLoginClick}
-          >
-            Login
-          </button>
-        </fieldset>
-      </div>
-
-      {showForm &&
-        Array.isArray(users) &&
+      {Array.isArray(users) &&
         users.map((user) => (
           <fieldset
             className={styles.fieldset_body}
@@ -129,6 +77,7 @@ const admin: NextPage = ({}) => {
                   </th>
                 </tr>
               </thead>
+
               <tbody>
                 <tr>
                   <td>
@@ -171,32 +120,31 @@ const admin: NextPage = ({}) => {
                       Edit
                     </button>
                     {/* {showForm && (
-                  <div>
-                    <div>
-                      <h2>Edit existing post</h2>
-                      <form>
-                        <label htmlFor="editName">Change name:</label>
-                        <br />
-                        <input
-                          type="text"
-                          name="editName"
-                          id="editName"
-                          placeholder="You wanna change the name?"
-                        />
-                        <br />
-                        <button type="submit">Change Post</button>
-                      </form>
-                      <button onClick={handleChangeClose}>X</button>
-                    </div>
-                  </div>
-                )} */}
+                      <div>
+                        <div>
+                          <h2>Edit existing post</h2>
+                          <form>
+                            <label htmlFor="editName">Change name:</label>
+                            <br />
+                            <input
+                              type="text"
+                              name="editName"
+                              id="editName"
+                              placeholder="You wanna change the name?"
+                            />
+                            <br />
+                            <button type="submit">Change Post</button>
+                          </form>
+                          <button onClick={handleChangeClose}>X</button>
+                        </div>
+                      </div>
+                    )} */}
                   </td>
                 </tr>
               </tbody>
             </table>
           </fieldset>
         ))}
-      <Breaks />
     </div>
   )
 }
