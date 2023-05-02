@@ -72,7 +72,7 @@ const CreatePost: NextPage = () => {
       })
       const data = await response.json()
       console.log("Response:", data)
-      router.push("/startPage")
+      router.push("/")
     } catch (error) {
       console.error("Error posting data:", error)
     }
@@ -178,7 +178,11 @@ const CreatePost: NextPage = () => {
 
           <br />
           <div className={styles.button_div}>
-            <button type="submit" className={styles.createpost_button}>
+            <button
+              type="submit"
+              className={styles.createpost_button}
+              onClick={handleGoBackClick}
+            >
               <strong>Post</strong>
             </button>
           </div>
