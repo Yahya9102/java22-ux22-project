@@ -10,7 +10,9 @@ const AdminPage: NextPage = () => {
   const [users, setUsers] = useState<User[]>([])
 
   const ADMIN_USERNAME = process.env.NEXT_PUBLIC_ADMIN_USERNAME
-  const ADMIN_PASSWORD = process.env.NEXT_PUBLIC_ADMIN_PASSWORD
+  const ADMIN_PASSWORD = process.env.REACT_APP_ADMIN_PASSWORD
+
+  console.log(ADMIN_USERNAME)
 
   const [adminCredentials, setAdminCredentials] = useState({
     username: "",

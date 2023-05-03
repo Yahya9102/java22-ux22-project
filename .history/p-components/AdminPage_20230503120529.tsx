@@ -6,11 +6,13 @@ import router from "next/router"
 import Breaks from "./breaks"
 import styles from "p-components/styles/playerInfo.module.css"
 
-const AdminPage: NextPage = () => {
+const admin: NextPage = () => {
   const [users, setUsers] = useState<User[]>([])
 
-  const ADMIN_USERNAME = process.env.NEXT_PUBLIC_ADMIN_USERNAME
-  const ADMIN_PASSWORD = process.env.NEXT_PUBLIC_ADMIN_PASSWORD
+  const ADMIN_USERNAME = process.env.ADMIN_USERNAME?.toString
+  const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD?.toString
+
+  console.log(ADMIN_USERNAME)
 
   const [adminCredentials, setAdminCredentials] = useState({
     username: "",
@@ -24,6 +26,7 @@ const AdminPage: NextPage = () => {
         const data = await response.json()
         if (Array.isArray(data)) {
           setUsers(data)
+          console.log(data)
         } else {
           console.log("Data is not an array:", data)
         }
@@ -218,4 +221,4 @@ const AdminPage: NextPage = () => {
   )
 }
 
-export default AdminPage
+export default admin

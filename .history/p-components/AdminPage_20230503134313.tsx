@@ -12,6 +12,8 @@ const AdminPage: NextPage = () => {
   const ADMIN_USERNAME = process.env.NEXT_PUBLIC_ADMIN_USERNAME
   const ADMIN_PASSWORD = process.env.NEXT_PUBLIC_ADMIN_PASSWORD
 
+  console.log(ADMIN_USERNAME)
+
   const [adminCredentials, setAdminCredentials] = useState({
     username: "",
     password: "",
