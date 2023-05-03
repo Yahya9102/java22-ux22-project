@@ -9,15 +9,11 @@ import styles from "p-components/styles/playerInfo.module.css"
 const admin: NextPage = () => {
   const [users, setUsers] = useState<User[]>([])
 
-  const ADMIN_USERNAME = process.env.REACT_APP_ADMIN_USERNAME
-  const ADMIN_PASSWORD = process.env.REACT_APP_ADMIN_PASSWORD
+  const ADMIN_USERNAME = "Admin"
+  const ADMIN_PASSWORD = "12345"
 
-  console.log(ADMIN_USERNAME)
-
-  const [adminCredentials, setAdminCredentials] = useState({
-    username: "",
-    password: "",
-  })
+  const [adminUsername, setAdminUsername] = useState("")
+  const [adminPassword, setAdminPassword] = useState("")
 
   useEffect(() => {
     async function fetchData() {
@@ -26,6 +22,7 @@ const admin: NextPage = () => {
         const data = await response.json()
         if (Array.isArray(data)) {
           setUsers(data)
+          console.log(data)
         } else {
           console.log("Data is not an array:", data)
         }
@@ -59,24 +56,18 @@ const admin: NextPage = () => {
   //this is for the playerinfos below
   const [showForm, setShowForm] = useState(false)
 
-  // this is for the loging to dissappear
-  const [showLogin, setShowLogin] = useState(false)
-
-  const hideLoging = () => {
-    setShowLogin(false)
-  }
-
   const handleChangeClick = async (_id: string) => {
     // setShowForm(true)
   }
 
+  const handleChangeClose = () => {
+    console.log("test hiding the form ")
+    setShowForm(false)
+  }
+
   const handleLoginClick = () => {
-    if (
-      adminCredentials.username === ADMIN_USERNAME &&
-      adminCredentials.password === ADMIN_PASSWORD
-    ) {
+    if (adminUsername === ADMIN_USERNAME && adminPassword === ADMIN_PASSWORD) {
       setShowForm(true)
-      hideLoging()
     } else {
       alert("Invalid admin username or password")
     }
@@ -84,53 +75,38 @@ const admin: NextPage = () => {
 
   return (
     <div>
-      <div>
-        <fieldset>
-          <label htmlFor="adminUsername">Admin Username:</label>
-          <br />
-          <input
-            className={style.input_fields}
-            type="text"
-            name="adminUsername"
-            id="adminUsername"
-            value={adminCredentials.username}
-            onChange={(e) =>
-              setAdminCredentials({
-                ...adminCredentials,
-                username: e.target.value,
-              })
-            }
-            placeholder="Username"
-          />
+      <fieldset>
+        <label htmlFor="adminUsername">Admin Username:</label>
+        <br />
+        <input
+          className={style.input_fields}
+          type="text"
+          name="adminUsername"
+          id="adminUsername"
+          value={adminUsername}
+          onChange={(e) => setAdminUsername(e.target.value)}
+          placeholder="Username"
+        />
 
-          <br />
-          <label className={style.label} htmlFor="adminPassword">
-            Admin Password:
-          </label>
-          <br />
-          <input
-            className={style.input_fields}
-            type="password"
-            name="adminPassword"
-            id="adminPassword"
-            value={adminCredentials.password}
-            onChange={(e) =>
-              setAdminCredentials({
-                ...adminCredentials,
-                password: e.target.value,
-              })
-            }
-            placeholder="password"
-          />
-          <br />
-          <button
-            className={styles.createpost_button}
-            onClick={handleLoginClick}
-          >
-            Login
-          </button>
-        </fieldset>
-      </div>
+        <br />
+        <label className={style.label} htmlFor="adminPassword">
+          Admin Password:
+        </label>
+        <br />
+        <input
+          className={styles.input_fields}
+          type="password"
+          name="adminPassword"
+          id="adminPassword"
+          value={adminPassword}
+          onChange={(e) => setAdminPassword(e.target.value)}
+          placeholder="password"
+        />
+        <br />
+        <button className={styles.createpost_button} onClick={handleLoginClick}>
+          Login
+        </button>
+      </fieldset>
 
       {showForm &&
         Array.isArray(users) &&

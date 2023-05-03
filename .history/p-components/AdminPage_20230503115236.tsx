@@ -9,15 +9,11 @@ import styles from "p-components/styles/playerInfo.module.css"
 const admin: NextPage = () => {
   const [users, setUsers] = useState<User[]>([])
 
-  const ADMIN_USERNAME = process.env.REACT_APP_ADMIN_USERNAME
-  const ADMIN_PASSWORD = process.env.REACT_APP_ADMIN_PASSWORD
+  const ADMIN_USERNAME = process.env.ADMIN_USERNAME
+  const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD
 
-  console.log(ADMIN_USERNAME)
-
-  const [adminCredentials, setAdminCredentials] = useState({
-    username: "",
-    password: "",
-  })
+  const [adminUsername, setAdminUsername] = useState("")
+  const [adminPassword, setAdminPassword] = useState("")
 
   useEffect(() => {
     async function fetchData() {
@@ -26,6 +22,7 @@ const admin: NextPage = () => {
         const data = await response.json()
         if (Array.isArray(data)) {
           setUsers(data)
+          console.log(data)
         } else {
           console.log("Data is not an array:", data)
         }
@@ -71,10 +68,7 @@ const admin: NextPage = () => {
   }
 
   const handleLoginClick = () => {
-    if (
-      adminCredentials.username === ADMIN_USERNAME &&
-      adminCredentials.password === ADMIN_PASSWORD
-    ) {
+    if (adminUsername === ADMIN_USERNAME && adminPassword === ADMIN_PASSWORD) {
       setShowForm(true)
       hideLoging()
     } else {
@@ -93,13 +87,8 @@ const admin: NextPage = () => {
             type="text"
             name="adminUsername"
             id="adminUsername"
-            value={adminCredentials.username}
-            onChange={(e) =>
-              setAdminCredentials({
-                ...adminCredentials,
-                username: e.target.value,
-              })
-            }
+            value={adminUsername}
+            onChange={(e) => setAdminUsername(e.target.value)}
             placeholder="Username"
           />
 
@@ -113,13 +102,8 @@ const admin: NextPage = () => {
             type="password"
             name="adminPassword"
             id="adminPassword"
-            value={adminCredentials.password}
-            onChange={(e) =>
-              setAdminCredentials({
-                ...adminCredentials,
-                password: e.target.value,
-              })
-            }
+            value={adminPassword}
+            onChange={(e) => setAdminPassword(e.target.value)}
             placeholder="password"
           />
           <br />

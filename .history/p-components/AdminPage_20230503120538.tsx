@@ -9,8 +9,8 @@ import styles from "p-components/styles/playerInfo.module.css"
 const admin: NextPage = () => {
   const [users, setUsers] = useState<User[]>([])
 
-  const ADMIN_USERNAME = process.env.REACT_APP_ADMIN_USERNAME
-  const ADMIN_PASSWORD = process.env.REACT_APP_ADMIN_PASSWORD
+  const ADMIN_USERNAME = process.env.ADMIN_USERNAME?.toString
+  const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD?.toString
 
   console.log(ADMIN_USERNAME)
 

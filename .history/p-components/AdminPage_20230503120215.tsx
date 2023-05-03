@@ -9,10 +9,8 @@ import styles from "p-components/styles/playerInfo.module.css"
 const admin: NextPage = () => {
   const [users, setUsers] = useState<User[]>([])
 
-  const ADMIN_USERNAME = process.env.REACT_APP_ADMIN_USERNAME
-  const ADMIN_PASSWORD = process.env.REACT_APP_ADMIN_PASSWORD
-
-  console.log(ADMIN_USERNAME)
+  const ADMIN_USERNAME = process.env.ADMIN_USERNAME
+  const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD
 
   const [adminCredentials, setAdminCredentials] = useState({
     username: "",
@@ -26,6 +24,7 @@ const admin: NextPage = () => {
         const data = await response.json()
         if (Array.isArray(data)) {
           setUsers(data)
+          console.log(data)
         } else {
           console.log("Data is not an array:", data)
         }
