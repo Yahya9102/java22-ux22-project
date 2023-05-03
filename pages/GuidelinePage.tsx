@@ -17,7 +17,7 @@ const guidelinePage: NextPage = () => {
       <div className={styles.onionImage}>
         <div className={styles.oniontext_div}>
           <h2 className={styles.onionText}>
-            ...before we get started <br /> we want you to read our <br />
+            ...before we get started <br /> we want you to read our<br />
             guidelines
           </h2>
         </div>
