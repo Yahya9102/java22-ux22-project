@@ -57,7 +57,7 @@ const guidelinePage: NextPage = () => {
 
       <div className={styles.casperlittle}>
         <Image
-          src={casperlittle}
+          src={casperjunior}
           alt={"Picture is unavailable"}
           className=" w-80"
         />

@@ -5,7 +5,6 @@ import guidelineOnion from "/public/guidelineOnion.png"
 import casperWithFace from "/public/casperwithface.png"
 import router from "next/router"
 import casperjunior from "/public/casperjunior.png"
-import casperlittle from "/public/casperlittle.png"
 const guidelinePage: NextPage = () => {
   const redirectoIndex = () => {
     router.push("/startPage")
@@ -47,21 +46,7 @@ const guidelinePage: NextPage = () => {
           remove your posts and issue a warning.
         </p>
       </div>
-      <div className={styles.casperjunior}>
-        <Image
-          src={casperjunior}
-          alt={"Picture is unavailable"}
-          className=" w-80"
-        />
-      </div>
 
-      <div className={styles.casperlittle}>
-        <Image
-          src={casperlittle}
-          alt={"Picture is unavailable"}
-          className=" w-80"
-        />
-      </div>
       <div className={styles.guideline_rules_right}>
         <h2 className={styles.guideline_h2}>Show care</h2>
         <p>

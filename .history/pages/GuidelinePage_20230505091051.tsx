@@ -55,13 +55,6 @@ const guidelinePage: NextPage = () => {
         />
       </div>
 
-      <div className={styles.casperlittle}>
-        <Image
-          src={casperlittle}
-          alt={"Picture is unavailable"}
-          className=" w-80"
-        />
-      </div>
       <div className={styles.guideline_rules_right}>
         <h2 className={styles.guideline_h2}>Show care</h2>
         <p>
