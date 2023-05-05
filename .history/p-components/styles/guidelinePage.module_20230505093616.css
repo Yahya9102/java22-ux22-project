@@ -103,10 +103,11 @@
 
 .guideline_fieldset_bottom {
   background-color: white;
-  border: 3px solid rgb(0, 0, 0);
+  border: 5px solid rgb(0, 0, 0);
   color: black;
   width: 90%;
   border-radius: 20px;
+  font-weight: 600;
 }
 
 .fieldset_div {
