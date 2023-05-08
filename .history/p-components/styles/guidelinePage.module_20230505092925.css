@@ -95,6 +95,7 @@
   width: 100%;
   display: grid;
   padding-left: 10%;
+  background-color: ;
 }
 
 .guideline_p_center {
@@ -103,10 +104,11 @@
 
 .guideline_fieldset_bottom {
   background-color: white;
-  border: 3px solid rgb(0, 0, 0);
+  border: 5px solid rgb(212, 70, 70);
   color: black;
   width: 90%;
   border-radius: 20px;
+  font-weight: 700;
 }
 
 .fieldset_div {

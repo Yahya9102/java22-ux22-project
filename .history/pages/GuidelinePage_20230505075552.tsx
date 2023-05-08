@@ -5,7 +5,6 @@ import guidelineOnion from "/public/guidelineOnion.png"
 import casperWithFace from "/public/casperwithface.png"
 import router from "next/router"
 import casperjunior from "/public/casperjunior.png"
-import casperlittle from "/public/casperlittle.png"
 const guidelinePage: NextPage = () => {
   const redirectoIndex = () => {
     router.push("/startPage")
@@ -39,14 +38,6 @@ const guidelinePage: NextPage = () => {
         <h2 className={styles.guideline_h2}>Be kind</h2>
         <p>Be respectful to others. Harassment and bullying are not allowed.</p>
       </div>
-
-      <div className={styles.guideline_rules_left}>
-        <h2 className={styles.guideline_h2}>Be yourself</h2>
-        <p className={styles.guideline_p}>
-          Do not pretend to be someone else or create fake accounts - we may
-          remove your posts and issue a warning.
-        </p>
-      </div>
       <div className={styles.casperjunior}>
         <Image
           src={casperjunior}
@@ -55,13 +46,14 @@ const guidelinePage: NextPage = () => {
         />
       </div>
 
-      <div className={styles.casperlittle}>
-        <Image
-          src={casperlittle}
-          alt={"Picture is unavailable"}
-          className=" w-80"
-        />
+      <div className={styles.guideline_rules_left}>
+        <h2 className={styles.guideline_h2}>Be yourself</h2>
+        <p className={styles.guideline_p}>
+          Don't pretend to be someone else or create fake accounts - we may
+          remove your posts and issue a warning.
+        </p>
       </div>
+
       <div className={styles.guideline_rules_right}>
         <h2 className={styles.guideline_h2}>Show care</h2>
         <p>
@@ -73,8 +65,9 @@ const guidelinePage: NextPage = () => {
         <h2 className={styles.guideline_h2}>Share with others</h2>
 
         <p className={styles.guideline_p_center}>
-          Do not be afraid to show your true self and share your interests- it
-          is the best way to make lasting connections with others.
+          Do not be afraid to show your true self and share your passion- it is
+          the best way to make lasting connections with others. So go ahead and
+          let your personality shine through.
         </p>
       </div>
       <div className={styles.fieldset_div}>

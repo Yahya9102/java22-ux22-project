@@ -43,7 +43,7 @@ const guidelinePage: NextPage = () => {
       <div className={styles.guideline_rules_left}>
         <h2 className={styles.guideline_h2}>Be yourself</h2>
         <p className={styles.guideline_p}>
-          Do not pretend to be someone else or create fake accounts - we may
+          Don't pretend to be someone else or create fake accounts - we may
           remove your posts and issue a warning.
         </p>
       </div>
@@ -55,13 +55,6 @@ const guidelinePage: NextPage = () => {
         />
       </div>
 
-      <div className={styles.casperlittle}>
-        <Image
-          src={casperlittle}
-          alt={"Picture is unavailable"}
-          className=" w-80"
-        />
-      </div>
       <div className={styles.guideline_rules_right}>
         <h2 className={styles.guideline_h2}>Show care</h2>
         <p>
@@ -73,8 +66,8 @@ const guidelinePage: NextPage = () => {
         <h2 className={styles.guideline_h2}>Share with others</h2>
 
         <p className={styles.guideline_p_center}>
-          Do not be afraid to show your true self and share your interests- it
-          is the best way to make lasting connections with others.
+          Don't be afraid to show your true self and share your interests- it's
+          the best way to make lasting connections with others.
         </p>
       </div>
       <div className={styles.fieldset_div}>
