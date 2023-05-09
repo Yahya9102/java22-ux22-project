@@ -1,0 +1,9 @@
+.chatContainer {
+  width: 100%;
+  max-width: 40vw;
+  height: 60vh;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}

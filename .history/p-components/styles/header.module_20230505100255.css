@@ -1,0 +1,19 @@
+.header_body {
+  display: flex;
+  justify-content: center;
+  border: 2px solid black;
+  min-height: 6rem;
+  max-height: 6rem;
+  border-radius: 0px 0px 15px 15px;
+  background-color: #6551ff;
+  height: 70%;
+}
+
+.menu_title {
+  padding-top: 1.35rem;
+  /* background-color: aqua; */
+}
+
+.header_background {
+  background-color: #f5f5f5;
+}

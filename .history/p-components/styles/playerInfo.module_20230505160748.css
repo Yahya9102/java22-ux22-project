@@ -1,0 +1,77 @@
+/* Add a background color and border to the fieldset */
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
+
+.fieldset_body {
+  background: linear-gradient(to bottom, rgba(30, 30, 30, 1) 23%, #f9f9f9 20%);
+  border: 3px solid rgb(23, 9, 9);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  width: 100%;
+}
+.user_name {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Space Grotesk";
+  color: rgba(245, 245, 245, 1);
+  margin-right: auto;
+}
+
+.user_location {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Space Grotesk";
+  color: rgba(245, 245, 245, 1);
+  margin-top: 2px;
+}
+
+.tableHeader_PlayerInfo {
+  font-family: "Space Grotesk";
+  font-size: 17px;
+  font-weight: 500;
+  color: rgba(245, 245, 245, 1);
+  padding-left: 5%;
+}
+
+.playerInfo_h2 {
+  font-family: "Space Grotesk";
+  font-weight: 600;
+  padding-left: 5%;
+}
+
+.playerInfo_h2_title {
+  font-family: "Space Grotesk";
+  font-weight: 700;
+  font-size: 20px;
+  padding-left: 5%;
+  margin-bottom: -20%;
+}
+
+.playerInfo_p {
+  font-family: "Maven Pro";
+  padding-left: 0.4rem;
+}
+
+.createpost_button {
+  background-color: #ceff42;
+  width: 130px;
+  height: 50px;
+  border-radius: 25px;
+  border: solid 2px;
+}
+
+.reporticon_logo {
+  background-color: red;
+
+  width: 30px;
+  height: 30px;
+  display: flex;
+  margin-right: 100%;
+}
+
+.user_details {
+  display: flex;
+  align-items: center;
+}
