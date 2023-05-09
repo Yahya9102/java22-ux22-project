@@ -64,6 +64,19 @@ const AdminPage: NextPage = () => {
     setShowLogin(false)
   }
 
+  // for hovering over the delete-button
+  const [isHovered, setIsHovered] = useState<boolean>(false)
+
+  // when hovering the delete-button
+  const handleHovering = () => {
+    setIsHovered(true)
+  }
+
+  // when not hovering the delete-button
+  const handleHoveringQuit = () => {
+    setIsHovered(false)
+  }
+
   const handleChangeClick = async (_id: string) => {
     // setShowForm(true)
   }
@@ -177,6 +190,8 @@ const AdminPage: NextPage = () => {
                     <p>ID: {JSON.stringify(user._id)}</p>
                     <button
                       onClick={() => handleDeleteClick(user._id.toString())}
+                      onMouseEnter={handleHovering}
+                      onMouseLeave={handleHoveringQuit}
                       className={styles.createpost_button}
                     >
                       Delete
