@@ -54,6 +54,49 @@ const AdminPage: NextPage = () => {
     }
   }
 
+  // a variable for the input values
+  const [editValues, setEditValues] = useState({
+    name: "",
+    location: "",
+    title: "",
+    post: "",
+    discord: "",
+  })
+
+  // An asyncronous function which takes edit values and update/patch it
+  const handleEditSubmit = async (_id: string, user: User) => {
+    console.log(_id)
+    try {
+      const { name, location, title, post, discord } = editValues
+
+      // Create an object with only the new values
+      const userToUpdate: Partial<User> = {}
+
+      if (name) userToUpdate.name = name
+      if (location) userToUpdate.location = location
+      if (title) userToUpdate.title = title
+      if (post) userToUpdate.post = post
+      if (discord) userToUpdate.discord = discord
+
+      const response = await fetch(
+        "http://localhost:3000/api/editUser?id=${_id}",
+        {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(userToUpdate),
+        }
+      )
+      if (!response.ok) {
+        throw new Error("Failed to edit user")
+      }
+      router.reload()
+    } catch (error) {
+      console.error("Error editing user info:", error)
+    }
+  }
+
   //this is for the playerinfos below
   const [showForm, setShowForm] = useState(false)
 
