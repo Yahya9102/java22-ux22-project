@@ -4,7 +4,6 @@ import { User } from "@/types/users"
 import router from "next/router"
 import Breaks from "./breaks"
 import styles from "p-components/styles/playerInfo.module.css"
-import withAdminAuth from "./withAdminAuth"
 
 const AdminPage: NextPage = () => {
   const [users, setUsers] = useState<User[]>([])
@@ -189,4 +188,4 @@ const AdminPage: NextPage = () => {
   )
 }
 
-export default withAdminAuth(AdminPage)
+export default AdminPage
