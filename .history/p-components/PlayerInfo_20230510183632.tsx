@@ -31,7 +31,9 @@ const Body: NextPage = ({}) => {
   return (
     <div>
       <div className={styles.table_container}>
-        <h1 className={styles.posts_text}></h1>
+        <h1 className={styles.posts_text}>
+          <strong>Posts</strong>
+        </h1>
       </div>
 
       {Array.isArray(users) &&
@@ -43,6 +45,7 @@ const Body: NextPage = ({}) => {
                   <tr>
                     <th className={styles.tableHeader_PlayerInfo}>
                       {user.name}
+                      <h6 className={styles.user_location}> {user.location}</h6>
                     </th>
                   </tr>
                 </thead>
@@ -68,7 +71,7 @@ const Body: NextPage = ({}) => {
                             href={`discord://discordapp.com/users/${user.discord}`}
                           >
                             <p className={styles.playerInfo_p}>
-                              Discord: {user.discord}
+                              {user.discord}
                             </p>
                           </a>
                         </nav>

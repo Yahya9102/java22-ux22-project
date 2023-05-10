@@ -21,7 +21,7 @@ const Header: NextPage = ({}) => {
   }
 
   const handleReturnToAdminPage = () => {
-    router.push("/adminLogin")
+    router.push("/AdminLogin")
   }
 
   const [menuIsOpen, setMenuIsOpen] = useState(false)

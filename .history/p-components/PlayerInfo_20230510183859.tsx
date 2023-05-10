@@ -43,6 +43,7 @@ const Body: NextPage = ({}) => {
                   <tr>
                     <th className={styles.tableHeader_PlayerInfo}>
                       {user.name}
+                      <h6 className={styles.user_location}> {user.location}</h6>
                     </th>
                   </tr>
                 </thead>
@@ -68,7 +69,7 @@ const Body: NextPage = ({}) => {
                             href={`discord://discordapp.com/users/${user.discord}`}
                           >
                             <p className={styles.playerInfo_p}>
-                              Discord: {user.discord}
+                              {user.discord}
                             </p>
                           </a>
                         </nav>

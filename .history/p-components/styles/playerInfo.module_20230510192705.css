@@ -7,7 +7,7 @@
   border: 3px solid rgb(23, 9, 9);
   border-radius: 10px;
   padding: 20px;
-  margin: 20px;
+  margin: 5px;
 }
 /*
 .table_button {
@@ -32,13 +32,14 @@
   font-weight: 700;
   padding-left: 2%;
   font-size: 15px;
+  margin-bottom: -1.3rem;
 }
 
 .playerInfo_h2_title {
   font-family: "Space Grotesk";
   font-weight: 700;
   font-size: 20px;
-  margin-top: 5%;
+  margin-top: -5%;
   margin-bottom: -5%;
   padding-left: 2%;
 }

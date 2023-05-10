@@ -1,7 +1,7 @@
 .chatContainer {
-  width: 30vw;
-  max-width: 50vw;
-  height: 80vh;
+  width: 100%;
+  max-width: 40vw;
+  height: 100vh;
   margin: 0 auto;
   border: 1px solid rgb(169, 77, 77);
   border-radius: 5px;
