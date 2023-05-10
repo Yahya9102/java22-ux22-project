@@ -18,8 +18,8 @@ const LoadingPage: NextPage = ({}) => {
         <h1 className={styles.h1}>Level up your friendships!</h1>
         <br />
         <p className={styles.p}>
-          Here you can find your gamingfriends! Write a post and start
-          connecting!
+          Here you can find your gamingfriends! Write a post and see what
+          happens!
         </p>
         <br />
         <div className={styles.image_div}>

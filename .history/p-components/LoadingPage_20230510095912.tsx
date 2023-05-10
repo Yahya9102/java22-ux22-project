@@ -19,7 +19,7 @@ const LoadingPage: NextPage = ({}) => {
         <br />
         <p className={styles.p}>
           Here you can find your gamingfriends! Write a post and start
-          connecting!
+          connecting
         </p>
         <br />
         <div className={styles.image_div}>

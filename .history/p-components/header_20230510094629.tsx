@@ -8,8 +8,11 @@ import Closeicon from "@/public/xcloseicon.png"
 import styles from "./styles/header.module.css"
 import { useRouter } from "next/router"
 import { useState } from "react"
+import Burgermenu from "@/public/hamburger-menu.png"
 
-const Header: NextPage = ({}) => {
+interface Props {}
+
+const Header: NextPage<Props> = ({}) => {
   const router = useRouter()
 
   const handleReturnToStartPage = () => {

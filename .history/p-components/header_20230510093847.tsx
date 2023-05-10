@@ -8,8 +8,11 @@ import Closeicon from "@/public/xcloseicon.png"
 import styles from "./styles/header.module.css"
 import { useRouter } from "next/router"
 import { useState } from "react"
+import Burgermenu from "@/public/hamburger-menu.png"
 
-const Header: NextPage = ({}) => {
+interface Props {}
+
+const Header: NextPage<Props> = ({}) => {
   const router = useRouter()
 
   const handleReturnToStartPage = () => {
@@ -51,6 +54,20 @@ const Header: NextPage = ({}) => {
         {menuIsOpen && (
           <nav className={styles.navigation_bar}>
             <ul className={styles.navigation_links}>
+              {/* <div className={styles.menu_icon}>
+                <button
+                  type="submit"
+                  onClick={handleToggle}
+                  className={styles.nav_toggle_button}
+                >
+                  <Image
+                    src={Closeicon}
+                    alt="Picture unavailable"
+                    width={28}
+                    className={styles.nav_logo}
+                  />
+                </button>
+              </div> */}
               <li className={styles.postsListItem}>
                 <h5>Posts</h5>
                 <button type="submit" onClick={handleReturnToStartPage}>

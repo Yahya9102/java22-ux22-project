@@ -19,6 +19,7 @@
   display: flex;
   flex: 1;
   justify-content: center;
+  margin-right: 4rem;
 }
 
 .nav_toggle_button {
@@ -32,7 +33,7 @@
   width: 33.333%;
   height: 100%;
   z-index: 1;
-  background-color: #1e1e1e;
+  background-color: #665757;
 }
 
 .navigation_links {
@@ -60,22 +61,4 @@
   font-size: x-large;
   color: #ffffff;
   /* background-color: violet; */
-}
-
-.menu_icon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  padding: 10px;
-  margin: 10px;
-}
-
-.hamburger {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background-color: #d7ff63;
-  margin: 5px 0;
-  transition: transform 0.2s ease-out;
 }
