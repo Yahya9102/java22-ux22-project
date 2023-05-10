@@ -1,0 +1,43 @@
+.input_fields {
+  border: solid 2px;
+  border-radius: 10px;
+  margin: 10px;
+  font-family: "Space Grotesk";
+  padding-left: 5px;
+  margin-left: 5%; /* Adjust the margin-left value */
+  /* Adjust the margin-top value */
+}
+
+.adminLogin_button {
+  background-color: #ceff42;
+  width: 130px;
+  height: 50px;
+  border-radius: 15px;
+  border: solid 2px;
+  margin-left: 35%;
+}
+
+.admin_body {
+  padding-top: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.admin_fieldset {
+  border-radius: 30px;
+  border-color: black;
+  border: solid 3px;
+
+  width: 80vw;
+  height: 30vh;
+  background: linear-gradient(0deg, #6551ff, #6551ff),
+    linear-gradient(0deg, #000000, #000000);
+}
+
+.label {
+  display: flex;
+  margin-bottom: -3rem;
+  justify-content: center;
+}
