@@ -1,5 +1,4 @@
 import { NextPage } from "next"
-import style from "p-components/styles/adminPage.module.css"
 import { useEffect, useState } from "react"
 import { User } from "@/types/users"
 import router from "next/router"
@@ -8,14 +7,13 @@ import styles from "p-components/styles/playerInfo.module.css"
 
 const AdminPage: NextPage = () => {
   const [users, setUsers] = useState<User[]>([])
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
 
-  const ADMIN_USERNAME = process.env.NEXT_PUBLIC_ADMIN_USERNAME
-  const ADMIN_PASSWORD = process.env.NEXT_PUBLIC_ADMIN_PASSWORD
-
-  const [adminCredentials, setAdminCredentials] = useState({
-    username: "",
-    password: "",
-  })
+  useEffect(() => {
+    if (sessionStorage.getItem("isAdminLoggedIn") === "true") {
+      setIsLoggedIn(true)
+    }
+  }, [])
 
   useEffect(() => {
     async function fetchData() {
@@ -124,70 +122,9 @@ const AdminPage: NextPage = () => {
     // setShowForm(true)
   }
 
-  const handleLoginClick = () => {
-    if (
-      adminCredentials.username === ADMIN_USERNAME &&
-      adminCredentials.password === ADMIN_PASSWORD
-    ) {
-      setShowForm(true)
-      hideLoging()
-    } else {
-      alert("Invalid admin username or password")
-    }
-  }
-
   return (
     <div>
-      <div>
-        <fieldset>
-          <label htmlFor="adminUsername">Admin Username:</label>
-          <br />
-          <input
-            className={style.input_fields}
-            type="text"
-            name="adminUsername"
-            id="adminUsername"
-            value={adminCredentials.username}
-            onChange={(e) =>
-              setAdminCredentials({
-                ...adminCredentials,
-                username: e.target.value,
-              })
-            }
-            placeholder="Username"
-          />
-
-          <br />
-          <label className={style.label} htmlFor="adminPassword">
-            Admin Password:
-          </label>
-          <br />
-          <input
-            className={style.input_fields}
-            type="password"
-            name="adminPassword"
-            id="adminPassword"
-            value={adminCredentials.password}
-            onChange={(e) =>
-              setAdminCredentials({
-                ...adminCredentials,
-                password: e.target.value,
-              })
-            }
-            placeholder="password"
-          />
-          <br />
-          <button
-            className={styles.createpost_button}
-            onClick={handleLoginClick}
-          >
-            Login
-          </button>
-        </fieldset>
-      </div>
-
-      {showForm &&
-        Array.isArray(users) &&
+      {Array.isArray(users) &&
         users.map((user) => (
           <fieldset
             className={styles.fieldset_body}
