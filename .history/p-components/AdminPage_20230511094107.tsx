@@ -171,7 +171,7 @@ const AdminPage: NextPage = () => {
                       className={style.save_button}
                       onClick={() => handleChangeClick(user._id.toString())}
                     >
-                      Save post
+                      Save changes
                     </button>
                     {/* {showForm && (
                   <div>

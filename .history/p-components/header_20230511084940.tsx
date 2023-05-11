@@ -29,6 +29,16 @@ const Header: NextPage = ({}) => {
     setMenuIsOpen(!menuIsOpen)
   }
 
+  const rootElement = document.documentElement
+
+  useEffect(() => {
+    if (menuIsOpen) {
+      rootElement.classList.add(styles.pageOpacity)
+    } else {
+      rootElement.classList.remove(styles.pageOpacity)
+    }
+  }, [menuIsOpen])
+
   return (
     <div className={styles.header_background}>
       <header className={styles.header_body}>

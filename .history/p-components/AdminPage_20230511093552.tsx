@@ -4,7 +4,6 @@ import { User } from "@/types/users"
 import router from "next/router"
 import Breaks from "./breaks"
 import styles from "p-components/styles/playerInfo.module.css"
-import style from "p-components/styles/adminPage.module.css"
 import withAdminAuth from "./withAdminAuth"
 
 const AdminPage: NextPage = () => {
@@ -149,29 +148,28 @@ const AdminPage: NextPage = () => {
                   <td>
                     <p>ID: {JSON.stringify(user._id)}</p>
                     <button
-                      className={style.cancel_button}
+                      onClick={() => handleDeleteClick(user._id.toString())}
+                      className={styles.delete_button}
+                    >
+                      Delete
+                    </button>
+                    <button
+                      className={styles.edit_button}
+                      onClick={() => handleChangeClick(user._id.toString())}
+                    >
+                      Edit
+                    </button>
+                    <button
+                      className={styles.cancel_button}
                       onClick={() => handleChangeClick(user._id.toString())}
                     >
                       Cancel
                     </button>
                     <button
-                      onClick={() => handleDeleteClick(user._id.toString())}
-                      className={style.delete_button}
-                    >
-                      Delete
-                    </button>
-                    <button
-                      className={style.edit_button}
+                      className={styles.edit_button}
                       onClick={() => handleChangeClick(user._id.toString())}
                     >
-                      Edit
-                    </button>
-
-                    <button
-                      className={style.save_button}
-                      onClick={() => handleChangeClick(user._id.toString())}
-                    >
-                      Save post
+                      Save changes
                     </button>
                     {/* {showForm && (
                   <div>

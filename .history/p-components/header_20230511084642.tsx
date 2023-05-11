@@ -7,7 +7,7 @@ import Guidelinesicon from "@/public/guidelinesicon.png"
 
 import styles from "./styles/header.module.css"
 import router, { useRouter } from "next/router"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 const Header: NextPage = ({}) => {
   const handleReturnToStartPage = () => {
