@@ -178,12 +178,12 @@ const AdminPage: NextPage = () => {
                     >
                       Delete
                     </button>
-                    <button
+                    {/* <button
                       className={styles.createpost_button}
                       onClick={() => handleShowInputFormClick(user)}
                     >
                       Edit
-                    </button>
+                    </button> */}
                     {editValues.id === user._id && (
                       <>
                         <div>
