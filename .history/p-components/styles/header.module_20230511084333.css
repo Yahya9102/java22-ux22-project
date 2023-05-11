@@ -85,7 +85,7 @@
 }
 
 .hamburger.cross:nth-child(2) {
-  transform: translate(5px, -2px) rotate(-45deg);
+  transform: translate(3px, -3px) rotate(-45deg);
 }
 
 .hamburger.cross:nth-child(3) {

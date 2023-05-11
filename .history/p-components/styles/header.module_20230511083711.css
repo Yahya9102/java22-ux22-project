@@ -80,14 +80,40 @@
   transition: transform 0.2s ease-out;
 }
 
-.hamburger.cross:nth-child(1) {
-  transform: translate(5px, 5px) rotate(45deg);
+.menu_button span:nth-of-type(1)::before {
+  transform: rotate(45deg);
+  top: 0.25rem;
 }
 
-.hamburger.cross:nth-child(2) {
-  transform: translate(5px, -2px) rotate(-45deg);
+.menu_button span:nth-of-type(1)::after {
+  transform: rotate(-45deg);
+  top: 0.25rem;
 }
 
-.hamburger.cross:nth-child(3) {
-  transform: translate(5px, -10px) rotate(45deg);
+.menu_button span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.menu_button span:nth-of-type(3)::before {
+  transform: rotate(-45deg);
+  top: -0.25rem;
+}
+
+.menu_button.open span:nth-of-type(1)::before {
+  transform: rotate(135deg);
+  top: 0.15rem;
+}
+
+.menu_button.open span:nth-of-type(1)::after {
+  transform: rotate(-135deg);
+  top: -0.15rem;
+}
+
+.menu_button.open span:nth-of-type(2) {
+  opacity: 1;
+}
+
+.menu_button.open span:nth-of-type(3)::before {
+  transform: rotate(135deg);
+  top: 0.15rem;
 }

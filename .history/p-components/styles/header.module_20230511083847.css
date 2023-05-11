@@ -81,13 +81,13 @@
 }
 
 .hamburger.cross:nth-child(1) {
-  transform: translate(5px, 5px) rotate(45deg);
+  transform: translateY(5px) rotate(50deg);
 }
 
 .hamburger.cross:nth-child(2) {
-  transform: translate(5px, -2px) rotate(-45deg);
+  transform: translateY(4px) rotate(120deg);
 }
 
 .hamburger.cross:nth-child(3) {
-  transform: translate(5px, -10px) rotate(45deg);
+  transform: translateY(-10px) rotate(50deg);
 }

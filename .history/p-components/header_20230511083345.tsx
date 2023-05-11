@@ -40,7 +40,7 @@ const Header: NextPage = ({}) => {
               }`}
             ></span>
             <span
-              className={`${styles.hamburger} ${
+              className={`${styles.hamburger} +${
                 menuIsOpen ? styles.cross : ""
               }`}
             ></span>
