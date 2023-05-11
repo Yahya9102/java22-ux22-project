@@ -107,7 +107,7 @@ const AdminPage: NextPage = () => {
       {Array.isArray(users) &&
         users.map((user) => (
           <fieldset
-            className={style.fieldset_body}
+            className={styles.fieldset_body}
             key={JSON.stringify(user._id)}
           >
             <table>

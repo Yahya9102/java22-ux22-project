@@ -1,22 +1,20 @@
 .edit_button {
   background: rgba(215, 255, 99, 1);
 
-  width: 74px;
+  width: 50px;
   height: 30px;
   border-radius: 25px;
   border: solid 2px;
-  margin: 1%;
 }
 
 .cancel_button {
   background: linear-gradient(0deg, #f5f5f5, #f5f5f5),
     linear-gradient(0deg, #1e1e1e, #1e1e1e);
 
-  width: 70px;
+  width: 60px;
   height: 30px;
   border-radius: 25px;
   border: solid 2px;
-  margin: 1%;
 }
 
 .save_button {
@@ -26,18 +24,17 @@
   height: 30px;
   border: 2px solid #1e1e1e;
   border-radius: 20px;
-  margin: 1%;
+  padding: 2%;
 }
 
 .delete_button {
   background: linear-gradient(0deg, #a80f00, #a80f00),
     linear-gradient(0deg, #1e1e1e, #1e1e1e);
   color: white;
-  width: 74px;
+  width: 60px;
   height: 30px;
   border: 2px solid #1e1e1e;
   border-radius: 20px;
-  margin: 1%;
 }
 
 .input_fields {
@@ -51,21 +48,4 @@
 
 .createpost:hover {
   background-color: #a80f00;
-}
-
-.tableHeader_PlayerInfo {
-  font-family: "Space Grotesk";
-  font-size: 17px;
-  font-weight: 500;
-  text-align: left;
-  color: rgba(245, 245, 245, 1);
-  padding-left: 2%;
-}
-
-.fieldset_body {
-  background: linear-gradient(to bottom, rgba(30, 30, 30, 1) 19%, #f9f9f9 20%);
-  border: 3px solid rgb(23, 9, 9);
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px;
 }
