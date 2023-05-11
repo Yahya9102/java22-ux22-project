@@ -165,12 +165,7 @@ const AdminPage: NextPage = () => {
                 <tr>
                   <td>
                     <p>ID: {JSON.stringify(user._id)}</p>
-                    <button
-                      className={style.cancel_button}
-                      onClick={() => handleToggleClick()}
-                    >
-                      Cancel
-                    </button>
+
                     <button
                       onClick={() => handleDeleteClick(user._id.toString())}
                       className={style.delete_button}
@@ -251,6 +246,12 @@ const AdminPage: NextPage = () => {
                             }
                           >
                             Save post
+                          </button>
+                          <button
+                            className={style.cancel_button}
+                            onClick={() => handleToggleClick()}
+                          >
+                            Cancel
                           </button>
                         </div>
                       </>
