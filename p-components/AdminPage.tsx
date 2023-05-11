@@ -87,6 +87,9 @@ const AdminPage: NextPage = () => {
 
   // An asyncronous function which takes edit values and update/patch it
   const handleEditSubmit = async (_id: string, user: User) => {
+    const shouldEdit = window.confirm(
+      "Would you like to save changes?"
+    )
     console.log(_id)
     try {
       const { name, location, title, post, discord } = editValues
@@ -181,10 +184,10 @@ const AdminPage: NextPage = () => {
                     {editValues.id === user._id && showEditForm && (
                       <>
                         <div>
-                          <h2>Edit existing post</h2>
+                          <h2 className={style.h2_admin}>Edit post:</h2>
                           <fieldset>
                             <form>
-                              <label htmlFor="editName">Edit name:</label>
+                              <label htmlFor="editName" className={style.input_label}>Edit name:</label>
                               <br />
                               <input
                                 type="text"
@@ -192,9 +195,16 @@ const AdminPage: NextPage = () => {
                                 id="editName"
                                 placeholder="Edit the name?"
                                 value={editValues.name}
+                                onChange={(e) =>
+                                  setEditValues({
+                                    ...editValues,
+                                    name: e.target.value,
+                                  })
+                                }
+                                className={style.input_fields}
                               />
                               <br />
-                              <label htmlFor="editLocation">
+                              <label htmlFor="editLocation"className={style.input_label}>
                                 Edit location:
                               </label>
                               <br />
@@ -204,9 +214,16 @@ const AdminPage: NextPage = () => {
                                 id="editLocation"
                                 placeholder="Edit the location?"
                                 value={editValues.location}
+                                onChange={(e) =>
+                                  setEditValues({
+                                    ...editValues,
+                                    location: e.target.value,
+                                  })
+                                }
+                                className={style.input_fields}
                               />
                               <br />
-                              <label htmlFor="editTitle">Edit title:</label>
+                              <label htmlFor="editTitle"className={style.input_label}>Edit title:</label>
                               <br />
                               <input
                                 type="text"
@@ -214,18 +231,33 @@ const AdminPage: NextPage = () => {
                                 id="editTitle"
                                 placeholder="Edit the title?"
                                 value={editValues.title}
+                                onChange={(e) =>
+                                  setEditValues({
+                                    ...editValues,
+                                    title: e.target.value,
+                                  })
+                                }
+                                className={style.input_fields}
                               />
                               <br />
-                              <label htmlFor="editPost">Edit post:</label>
+                              <label htmlFor="editPost"className={style.input_label}>Edit post:</label>
                               <br />
                               <textarea
                                 name="editPost"
                                 id="editPost"
                                 placeholder="Edit the post?"
                                 value={editValues.post}
+                                onChange={(e) =>
+                                  setEditValues({
+                                    ...editValues,
+                                    post: e.target.value,
+                                  })
+                                }
+                                className={style.input_field_desc}
+
                               />
                               <br />
-                              <label htmlFor="editDiscord">
+                              <label htmlFor="editDiscord"className={style.input_label}>
                                 Edit discord name:
                               </label>
                               <br />
@@ -235,6 +267,14 @@ const AdminPage: NextPage = () => {
                                 id="editDiscord"
                                 placeholder="Edit the discord name?"
                                 value={editValues.discord}
+                                onChange={(e) =>
+                                  setEditValues({
+                                    ...editValues,
+                                    discord: e.target.value,
+                                  })
+                                }
+                                className={style.input_fields}
+
                               />
                             </form>
                           </fieldset>
