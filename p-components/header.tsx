@@ -62,15 +62,17 @@ const Header: NextPage = ({}) => {
         {menuIsOpen && (
           <nav className={styles.navigation_bar}>
             <ul className={styles.navigation_links}>
-              <li className={styles.postsListItem}>
-                <h5>Posts</h5>
-                <button type="submit" onClick={handleReturnToStartPage}>
-                  <Image
-                    src={Navposticon}
-                    alt="Picture unavailable"
-                    width={100}
-                  />
-                </button>
+              <li>
+                <div className={styles.postsListItem}>
+                  <h5>Posts</h5>
+                  <button type="submit" onClick={handleReturnToStartPage}>
+                    <Image
+                      src={Navposticon}
+                      alt="Picture unavailable"
+                      width={40}
+                    />
+                  </button>
+                </div>
               </li>
               <li className={styles.guidlinesListItem}>
                 <h5>Guidelines</h5>
@@ -78,7 +80,7 @@ const Header: NextPage = ({}) => {
                   <Image
                     src={Guidelinesicon}
                     alt="Picture unavailable"
-                    width={100}
+                    width={40}
                   />
                 </button>
               </li>
@@ -88,7 +90,7 @@ const Header: NextPage = ({}) => {
                   <Image
                     src={Adminlockicon}
                     alt="Picture unavailable"
-                    width={100}
+                    width={40}
                   />
                 </button>
               </li>
