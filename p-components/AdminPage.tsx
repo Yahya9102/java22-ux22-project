@@ -54,14 +54,34 @@ const AdminPage: NextPage = () => {
     }
   }
 
+  const [showEditForm, setShowEditForm] = useState(false)
+
+  // handle visibility of the edit form
+  const handleToggleClick = async (_id: string) => {
+    setShowEditForm(!showEditForm)
+  }
+
   // a variable for the input values
   const [editValues, setEditValues] = useState({
+    id: "",
     name: "",
     location: "",
     title: "",
     post: "",
     discord: "",
   })
+
+  // preset the input values to the current posts values
+  const handleShowInputFormClick = async (user: User) => {
+    setEditValues({
+      id: user._id,
+      name: user.name,
+      location: user.location,
+      title: user.title,
+      post: user.post,
+      discord: user.discord,
+    })
+  }
 
   // An asyncronous function which takes edit values and update/patch it
   const handleEditSubmit = async (_id: string, user: User) => {
@@ -95,10 +115,6 @@ const AdminPage: NextPage = () => {
     } catch (error) {
       console.error("Error editing user info:", error)
     }
-  }
-
-  const handleChangeClick = async (_id: string) => {
-    // setShowForm(true)
   }
 
   return (
@@ -155,30 +171,83 @@ const AdminPage: NextPage = () => {
                     </button>
                     <button
                       className={styles.createpost_button}
-                      onClick={() => handleChangeClick(user._id.toString())}
+                      onClick={() => handleShowInputFormClick(user)}
                     >
                       Edit
                     </button>
-                    {/* {showForm && (
-                  <div>
-                    <div>
-                      <h2>Edit existing post</h2>
-                      <form>
-                        <label htmlFor="editName">Change name:</label>
-                        <br />
-                        <input
-                          type="text"
-                          name="editName"
-                          id="editName"
-                          placeholder="You wanna change the name?"
-                        />
-                        <br />
-                        <button type="submit">Change Post</button>
-                      </form>
-                      <button onClick={handleChangeClose}>X</button>
-                    </div>
-                  </div>
-                )} */}
+                    {editValues.id === user._id && showEditForm && (
+                      <>
+                        <div>
+                          <h2>Edit existing post</h2>
+                          <fieldset>
+                            <form>
+                              <label htmlFor="editName">Edit name:</label>
+                              <br />
+                              <input
+                                type="text"
+                                name="editName"
+                                id="editName"
+                                placeholder="Edit the name?"
+                                value={editValues.name}
+                              />
+                              <br />
+                              <label htmlFor="editLocation">
+                                Edit location:
+                              </label>
+                              <br />
+                              <input
+                                type="text"
+                                name="editLocation"
+                                id="editLocation"
+                                placeholder="Edit the location?"
+                                value={editValues.location}
+                              />
+                              <br />
+                              <label htmlFor="editTitle">Edit title:</label>
+                              <br />
+                              <input
+                                type="text"
+                                name="editTitle"
+                                id="editTitle"
+                                placeholder="Edit the title?"
+                                value={editValues.title}
+                              />
+                              <br />
+                              <label htmlFor="editPost">Edit post:</label>
+                              <br />
+                              <textarea
+                                name="editPost"
+                                id="editPost"
+                                placeholder="Edit the post?"
+                                value={editValues.post}
+                              />
+                              <br />
+                              <label htmlFor="editDiscord">
+                                Edit discord name:
+                              </label>
+                              <br />
+                              <input
+                                type="text"
+                                name="editDiscord"
+                                id="editDiscord"
+                                placeholder="Edit the discord name?"
+                                value={editValues.discord}
+                              />
+                            </form>
+                          </fieldset>
+                          <br />
+                          <button
+                            type="submit"
+                            className={styles.createpost_button}
+                            onClick={() =>
+                              handleEditSubmit(user._id.toString(), user)
+                            }
+                          >
+                            Save Changes
+                          </button>
+                        </div>
+                      </>
+                    )}
                   </td>
                 </tr>
               </tbody>
