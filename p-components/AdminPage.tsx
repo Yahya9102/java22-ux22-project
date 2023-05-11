@@ -184,12 +184,6 @@ const AdminPage: NextPage = () => {
                     >
                       Edit
                     </button>
-                    <button
-                      className={style.save_button}
-                      // onClick={() => handleEditSubmit(user._id.toString())}
-                    >
-                      Save post
-                    </button>
                     {editValues.id === user._id && showEditForm && (
                       <>
                         <div>
@@ -251,15 +245,14 @@ const AdminPage: NextPage = () => {
                             </form>
                           </fieldset>
                           <br />
-                          {/* <button
-                            type="submit"
-                            className={styles.createpost_button}
+                          <button
+                            className={style.save_button}
                             onClick={() =>
                               handleEditSubmit(user._id.toString(), user)
                             }
                           >
-                            Save Changes
-                          </button> */}
+                            Save post
+                          </button>
                         </div>
                       </>
                     )}
