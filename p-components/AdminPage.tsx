@@ -55,11 +55,11 @@ const AdminPage: NextPage = () => {
     }
   }
 
-  // const [showEditForm, setShowEditForm] = useState(false)
+  const [showEditForm, setShowEditForm] = useState(true)
 
   // handle visibility of the edit form
-  const handleToggleClick = async (_id: string) => {
-    // setShowEditForm(!showEditForm)
+  const handleToggleClick = () => {
+    setShowEditForm(!showEditForm)
   }
 
   // a variable for the input values
@@ -178,13 +178,19 @@ const AdminPage: NextPage = () => {
                     >
                       Delete
                     </button>
-                    {/* <button
-                      className={styles.createpost_button}
+                    <button
+                      className={style.edit_button}
                       onClick={() => handleShowInputFormClick(user)}
                     >
                       Edit
-                    </button> */}
-                    {editValues.id === user._id && (
+                    </button>
+                    <button
+                      className={style.save_button}
+                      // onClick={() => handleEditSubmit(user._id.toString())}
+                    >
+                      Save post
+                    </button>
+                    {editValues.id === user._id && showEditForm && (
                       <>
                         <div>
                           <h2>Edit existing post</h2>
@@ -245,7 +251,7 @@ const AdminPage: NextPage = () => {
                             </form>
                           </fieldset>
                           <br />
-                          <button
+                          {/* <button
                             type="submit"
                             className={styles.createpost_button}
                             onClick={() =>
@@ -253,43 +259,10 @@ const AdminPage: NextPage = () => {
                             }
                           >
                             Save Changes
-                          </button>
+                          </button> */}
                         </div>
                       </>
                     )}
-                    <button
-                      className={style.edit_button}
-                      // onClick={() => handleChangeClick(user._id.toString())}
-                    >
-                      Edit
-                    </button>
-
-                    <button
-                      className={style.save_button}
-                      // onClick={() => handleEditSubmit(user._id.toString())}
-                    >
-                      Save post
-                    </button>
-                    {/* {showForm && (
-                  <div>
-                    <div>
-                      <h2>Edit existing post</h2>
-                      <form>
-                        <label htmlFor="editName">Change name:</label>
-                        <br />
-                        <input
-                          type="text"
-                          name="editName"
-                          id="editName"
-                          placeholder="You wanna change the name?"
-                        />
-                        <br />
-                        <button type="submit">Change Post</button>
-                      </form>
-                      <button onClick={handleChangeClose}>X</button>
-                    </div>
-                  </div>
-                )} */}
                   </td>
                 </tr>
               </tbody>
