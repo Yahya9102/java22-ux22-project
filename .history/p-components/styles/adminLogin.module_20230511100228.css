@@ -9,7 +9,7 @@
   margin: 10px;
   font-family: "Space Grotesk";
   padding-left: 5px;
-  margin-left: 7vw; /* Adjust the margin-left value */
+  margin-left: 10%; /* Adjust the margin-left value */
   /* Adjust the margin-top value */
 }
 
@@ -19,7 +19,7 @@
   height: 50px;
   border-radius: 15px;
   border: solid 2px;
-  margin-left: 19vw;
+  margin-left: 25%;
   margin-top: -5%;
 }
 
@@ -47,5 +47,4 @@
   padding-top: 12%;
   margin-top: -4%;
   margin-bottom: -5%;
-  justify-content: center;
 }
