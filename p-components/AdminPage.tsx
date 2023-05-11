@@ -74,6 +74,7 @@ const AdminPage: NextPage = () => {
 
   // preset the input values to the current posts values
   const handleShowInputFormClick = async (user: User) => {
+    setShowEditForm(true)
     setEditValues({
       id: user._id,
       name: user.name,
@@ -166,9 +167,7 @@ const AdminPage: NextPage = () => {
                     <p>ID: {JSON.stringify(user._id)}</p>
                     <button
                       className={style.cancel_button}
-                      onClick={() =>
-                        handleEditSubmit(user._id.toString(), user)
-                      }
+                      onClick={() => handleToggleClick()}
                     >
                       Cancel
                     </button>
