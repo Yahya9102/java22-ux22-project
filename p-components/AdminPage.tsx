@@ -4,6 +4,7 @@ import { User } from "@/types/users"
 import router from "next/router"
 import Breaks from "./breaks"
 import styles from "p-components/styles/playerInfo.module.css"
+import style from "p-components/styles/adminPage.module.css"
 import withAdminAuth from "./withAdminAuth"
 
 const AdminPage: NextPage = () => {
@@ -54,11 +55,11 @@ const AdminPage: NextPage = () => {
     }
   }
 
-  const [showEditForm, setShowEditForm] = useState(false)
+  // const [showEditForm, setShowEditForm] = useState(false)
 
   // handle visibility of the edit form
   const handleToggleClick = async (_id: string) => {
-    setShowEditForm(!showEditForm)
+    // setShowEditForm(!showEditForm)
   }
 
   // a variable for the input values
@@ -122,13 +123,13 @@ const AdminPage: NextPage = () => {
       {Array.isArray(users) &&
         users.map((user) => (
           <fieldset
-            className={styles.fieldset_body}
+            className={style.fieldset_body}
             key={JSON.stringify(user._id)}
           >
             <table>
               <thead>
                 <tr>
-                  <th className={styles.tableHeader_PlayerInfo}>
+                  <th className={style.tableHeader_PlayerInfo}>
                     {user.name}
                     <h6 className={styles.user_location}> {user.location}</h6>
                   </th>
@@ -164,8 +165,16 @@ const AdminPage: NextPage = () => {
                   <td>
                     <p>ID: {JSON.stringify(user._id)}</p>
                     <button
+                      className={style.cancel_button}
+                      onClick={() =>
+                        handleEditSubmit(user._id.toString(), user)
+                      }
+                    >
+                      Cancel
+                    </button>
+                    <button
                       onClick={() => handleDeleteClick(user._id.toString())}
-                      className={styles.createpost_button}
+                      className={style.delete_button}
                     >
                       Delete
                     </button>
@@ -175,7 +184,7 @@ const AdminPage: NextPage = () => {
                     >
                       Edit
                     </button>
-                    {editValues.id === user._id && showEditForm && (
+                    {editValues.id === user._id && (
                       <>
                         <div>
                           <h2>Edit existing post</h2>
@@ -248,6 +257,39 @@ const AdminPage: NextPage = () => {
                         </div>
                       </>
                     )}
+                    <button
+                      className={style.edit_button}
+                      // onClick={() => handleChangeClick(user._id.toString())}
+                    >
+                      Edit
+                    </button>
+
+                    <button
+                      className={style.save_button}
+                      // onClick={() => handleEditSubmit(user._id.toString())}
+                    >
+                      Save post
+                    </button>
+                    {/* {showForm && (
+                  <div>
+                    <div>
+                      <h2>Edit existing post</h2>
+                      <form>
+                        <label htmlFor="editName">Change name:</label>
+                        <br />
+                        <input
+                          type="text"
+                          name="editName"
+                          id="editName"
+                          placeholder="You wanna change the name?"
+                        />
+                        <br />
+                        <button type="submit">Change Post</button>
+                      </form>
+                      <button onClick={handleChangeClose}>X</button>
+                    </div>
+                  </div>
+                )} */}
                   </td>
                 </tr>
               </tbody>

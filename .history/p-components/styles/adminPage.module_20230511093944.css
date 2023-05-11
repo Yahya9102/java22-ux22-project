@@ -1,0 +1,46 @@
+.edit_button {
+  background-color: #ceff42;
+  width: 130px;
+  height: 50px;
+  border-radius: 25px;
+  border: solid 2px;
+}
+
+.cancel_button {
+  background: linear-gradient(0deg, #f5f5f5, #f5f5f5),
+    linear-gradient(0deg, #1e1e1e, #1e1e1e);
+
+  width: 90px;
+  height: 50px;
+  border-radius: 25px;
+  border: solid 2px;
+}
+
+.save_button {
+  background-color: #ceff42;
+  width: 130px;
+  height: 50px;
+  border-radius: 25px;
+  border: solid 2px;
+}
+
+.delete_button {
+  background-color: #ceff42;
+  width: 130px;
+  height: 50px;
+  border-radius: 25px;
+  border: solid 2px;
+}
+
+.input_fields {
+  border: solid 2px;
+  width: 30vw;
+  border-radius: 10px;
+  margin: 10px;
+  font-family: "Space Grotesk";
+  padding-left: 5px;
+}
+
+.createpost:hover {
+  background-color: #a80f00;
+}

@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+.input_fields {
+  display: flex;
+  border: solid 2px;
+  height: 4vh;
+  border-radius: 10px;
+  margin: 10px;
+  font-family: "Space Grotesk";
+  padding-left: 5px;
+  margin-left: 7vw; /* Adjust the margin-left value */
+  /* Adjust the margin-top value */
+}
+
+.adminLogin_button {
+  background-color: #ceff42;
+  width: 130px;
+  height: 40px;
+  border-radius: 15px;
+  border: solid 2px;
+  margin-left: 19vw;
+}
+
+.admin_body {
+  padding-top: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.admin_fieldset {
+  border-radius: 30px;
+  border-color: black;
+  border: solid 3px;
+
+  width: 80vw;
+  height: 30vh;
+  background: linear-gradient(0deg, #6551ff, #6551ff),
+    linear-gradient(0deg, #000000, #000000);
+}
+
+.label {
+  display: flex;
+  padding-top: 12%;
+  margin-top: -4%;
+  margin-bottom: -5%;
+  justify-content: center;
+}
