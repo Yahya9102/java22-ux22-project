@@ -18,8 +18,8 @@ function MainFooter() {
           <Image
             src={navbarImage}
             alt=""
-            width={74}
-            height={64}
+            width={24}
+            height={14}
             className={styles.image_post}
           />
         </button>

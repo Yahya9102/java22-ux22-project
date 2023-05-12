@@ -84,6 +84,19 @@ const Body: NextPage = ({}) => {
             </fieldset>
           </div>
         ))}
+      <button
+        type="submit"
+        onClick={handleCreateButtonClick}
+        className={styles.floating_button}
+      >
+        <Image
+          src={navbarImage}
+          alt=""
+          width={74}
+          height={74}
+          className={styles.image_post}
+        />
+      </button>
     </div>
   )
 }

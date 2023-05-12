@@ -11,21 +11,7 @@ function MainFooter() {
     router.push("/createPost")
   }
 
-  return (
-    <div>
-      <nav className={styles.main_footer}>
-        <button type="submit" onClick={handleCreateButtonClick}>
-          <Image
-            src={navbarImage}
-            alt=""
-            width={74}
-            height={64}
-            className={styles.image_post}
-          />
-        </button>
-      </nav>
-    </div>
-  )
+  return <div></div>
 }
 
 export default MainFooter

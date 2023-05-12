@@ -17,7 +17,7 @@ const Header: NextPage = ({}) => {
 
   const handleReturnToGuidelines = () => {
     router.push("/GuidelinePage")
-    sessionStorage.removeItem("email")
+    sessionStorage.clear
   }
 
   const handleReturnToAdminPage = () => {

@@ -79,11 +79,36 @@ const Body: NextPage = ({}) => {
                       </div>
                     </td>
                   </tr>
+                  {/**   <tr>
+              <td>
+                <div className={styles.table_button_wrapper}>
+                  <Image
+                    src={heartimage}
+                    className={styles.heartimage}
+                    alt="Heart icon"
+                  />
+                  <button className={styles.table_button}>Reply</button>
+                </div>
+              </td>
+            </tr> */}
                 </tbody>
               </table>
             </fieldset>
           </div>
         ))}
+      <button
+        type="submit"
+        onClick={handleCreateButtonClick}
+        className={styles.floating_button}
+      >
+        <Image
+          src={navbarImage}
+          alt=""
+          width={94}
+          height={64}
+          className={styles.image_post}
+        />
+      </button>
     </div>
   )
 }

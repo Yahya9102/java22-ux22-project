@@ -13,17 +13,19 @@ function MainFooter() {
 
   return (
     <div>
-      <nav className={styles.main_footer}>
-        <button type="submit" onClick={handleCreateButtonClick}>
-          <Image
-            src={navbarImage}
-            alt=""
-            width={74}
-            height={64}
-            className={styles.image_post}
-          />
-        </button>
-      </nav>
+      <button
+        type="submit"
+        onClick={handleCreateButtonClick}
+        className={styles.floating_button}
+      >
+        <Image
+          src={navbarImage}
+          alt=""
+          width={64}
+          height={64}
+          className={styles.image_post}
+        />
+      </button>
     </div>
   )
 }

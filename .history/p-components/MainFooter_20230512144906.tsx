@@ -8,7 +8,7 @@ function MainFooter() {
   const router = useRouter()
 
   const handleCreateButtonClick = () => {
-    router.push("/createPost")
+    router.push("/CreateUserPosts")
   }
 
   return (
@@ -18,7 +18,7 @@ function MainFooter() {
           <Image
             src={navbarImage}
             alt=""
-            width={74}
+            width={64}
             height={64}
             className={styles.image_post}
           />
