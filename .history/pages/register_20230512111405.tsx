@@ -42,8 +42,8 @@ const Register: NextPage = () => {
     <div>
       <div className={styles.register_body}>
         <fieldset>
+          <h2>Create Account</h2>
           <form onSubmit={handleSubmit} className={styles.createUser_form}>
-            <h2 className={styles.register_h2}>Create Account</h2>
             <label htmlFor="name" className={styles.label}>
               Name:
             </label>

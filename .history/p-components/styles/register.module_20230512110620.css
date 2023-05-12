@@ -1,26 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
-
 .input_fields {
   border: solid 2px;
-  border-radius: 12px;
+  border-radius: 10px;
   margin: 10px;
   font-family: "Space Grotesk";
-  margin-bottom: -10px;
-  width: 95%;
-  height: 40px;
+  padding-left: 5px;
 }
 
 .userRegister_button {
   background-color: #ceff42;
-  width: 250px;
-  height: 45px;
-  border-radius: 105px;
+  width: 130px;
+  height: 50px;
+  border-radius: 25px;
   border: solid 2px;
-  margin-top: 4%;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
+  margin-left: 18%;
 }
 
 .label {
@@ -47,20 +39,8 @@
   background: #f5f5f5;
   border: 2px solid #000000;
   border-radius: 12px;
+  order: 0;
+  flex-grow: 0;
   margin-top: 20%;
   margin-left: 5%;
-}
-
-.register_h2 {
-  /* Header S */
-
-  font-family: "Space Grotesk";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-  padding-left: 20vw;
-  letter-spacing: 0.5px;
-  padding-bottom: 10%;
-  color: #000000;
 }

@@ -50,17 +50,3 @@
   margin-top: 20%;
   margin-left: 5%;
 }
-
-.register_h2 {
-  /* Header S */
-
-  font-family: "Space Grotesk";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-  padding-left: 20vw;
-  letter-spacing: 0.5px;
-  padding-bottom: 10%;
-  color: #000000;
-}
