@@ -17,7 +17,7 @@
   border-radius: 105px;
   border: solid 2px;
   margin-top: 4%;
-  margin-left: 5%;
+  margin-left: 4%;
 }
 
 .label {
@@ -47,9 +47,10 @@
 .login_body {
   background: rgba(101, 81, 255, 1);
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 .createAccount_div {
+  background: rgba(101, 81, 255, 1);
   margin-left: 10%;
   display: flex;
   flex-direction: column;
