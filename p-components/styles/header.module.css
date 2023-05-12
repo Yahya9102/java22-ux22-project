@@ -39,14 +39,14 @@
   background-color: #1e1e1e;
 }
 
-.navigation_links {
+/* .navigation_links {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 100%;
   height: 100%;
   border: 2px solid #1e1e1e;
-}
+} */
 
 .postsListItem {
   display: flex;
@@ -73,7 +73,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 225px;
+  margin-top: 250px;
 }
 
 .menu_icon {
