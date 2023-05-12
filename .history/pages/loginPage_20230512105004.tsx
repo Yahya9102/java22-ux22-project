@@ -86,10 +86,7 @@ const Login: NextPage = () => {
         <div className={styles.createAccount_div}>
           <h3 className={styles.h3_loginPage}>No account yet?</h3>
           <br />
-          <button
-            className={styles.create_account_button}
-            onClick={redirectToRegisterPage}
-          >
+          <button className={styles.create_account_button}>
             Create account
           </button>
         </div>
