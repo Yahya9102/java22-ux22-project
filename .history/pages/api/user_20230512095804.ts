@@ -1,3 +1,4 @@
+// pages/api/user.ts
 import { NextApiRequest, NextApiResponse } from "next"
 import { connectToDatabase } from "@/utils/db"
 
