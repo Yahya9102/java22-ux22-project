@@ -30,16 +30,10 @@ function MainFooter() {
 
   const handleMouseMove = (e: MouseEvent) => {
     if (dragging) {
-      let newX = e.clientX - dragStartPos.current.x
-      let newY = e.clientY - dragStartPos.current.y
-
-      // Ensure the button stays within the window boundaries
-      if (newX < 0) newX = 0
-      if (newY < 0) newY = 0
-      if (newX + 74 > window.innerWidth) newX = window.innerWidth - 74
-      if (newY + 64 > window.innerHeight) newY = window.innerHeight - 64
-
-      setPosition({ x: newX, y: newY })
+      setPosition({
+        x: e.clientX - dragStartPos.current.x,
+        y: e.clientY - dragStartPos.current.y,
+      })
     }
   }
 
@@ -53,18 +47,13 @@ function MainFooter() {
 
   const handleTouchMove = (e: TouchEvent) => {
     if (dragging) {
-      let newX = e.touches[0].clientX - dragStartPos.current.x
-      let newY = e.touches[0].clientY - dragStartPos.current.y
-
-      // Ensure the button stays within the window boundaries
-      if (newX < 0) newX = 0
-      if (newY < 0) newY = 0
-      if (newX + 74 > window.innerWidth) newX = window.innerWidth - 74
-      if (newY + 64 > window.innerHeight) newY = window.innerHeight - 64
-
-      setPosition({ x: newX, y: newY })
+      setPosition({
+        x: e.touches[0].clientX - dragStartPos.current.x,
+        y: e.touches[0].clientY - dragStartPos.current.y,
+      })
     }
   }
+
   const handleTouchEnd = (e: TouchEvent) => {
     setDragging(false)
   }
