@@ -1,0 +1,11 @@
+.main_footer {
+  position: fixed;
+  bottom: 20px; /* adjust as needed */
+  right: 20px; /* adjust as needed */
+  border: none;
+  background-color: transparent;
+
+  border-radius: 50%;
+  border-bottom: 22px;
+  box-shadow: 10px 14px 18px rgba(63, 188, 88, 0.7);
+}

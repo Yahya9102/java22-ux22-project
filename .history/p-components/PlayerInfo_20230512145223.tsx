@@ -2,10 +2,9 @@ import { NextPage } from "next"
 import styles from "p-components/styles/playerInfo.module.css"
 import { useEffect, useState } from "react"
 import { User } from "@/types/users"
+import reporticon from "/public/reporticon.png"
 
-import navbarImage from "../public/posticon.png"
 import Image from "next/image"
-import router from "next/router"
 //import heartimage from "../public/heartimage.png"
 
 const Body: NextPage = ({}) => {
@@ -27,10 +26,6 @@ const Body: NextPage = ({}) => {
     }
     fetchData()
   }, [])
-
-  const handleCreateButtonClick = () => {
-    router.push("/createPost")
-  }
 
   return (
     <div>
@@ -79,11 +74,36 @@ const Body: NextPage = ({}) => {
                       </div>
                     </td>
                   </tr>
+                  {/**   <tr>
+              <td>
+                <div className={styles.table_button_wrapper}>
+                  <Image
+                    src={heartimage}
+                    className={styles.heartimage}
+                    alt="Heart icon"
+                  />
+                  <button className={styles.table_button}>Reply</button>
+                </div>
+              </td>
+            </tr> */}
                 </tbody>
               </table>
             </fieldset>
           </div>
         ))}
+      <button
+        type="submit"
+        onClick={handleCreateButtonClick}
+        className={styles.floating_button}
+      >
+        <Image
+          src={navbarImage}
+          alt=""
+          width={64}
+          height={64}
+          className={styles.image_post}
+        />
+      </button>
     </div>
   )
 }

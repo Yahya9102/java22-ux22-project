@@ -17,7 +17,7 @@ const Header: NextPage = ({}) => {
 
   const handleReturnToGuidelines = () => {
     router.push("/GuidelinePage")
-    sessionStorage.removeItem("email")
+    sessionStorage.clear
   }
 
   const handleReturnToAdminPage = () => {
@@ -63,6 +63,7 @@ const Header: NextPage = ({}) => {
 
         {menuIsOpen && (
           <nav className={styles.navigation_bar}>
+            {/* <div className={styles.navigation_links}> */}
             <div className={styles.postsListItem}>
               <button type="submit" onClick={handleReturnToStartPage}>
                 <Image src={Navposticon} alt="Picture unavailable" width={45} />
@@ -98,6 +99,7 @@ const Header: NextPage = ({}) => {
               </button>
               <h5>Admin</h5>
             </div>
+            {/* </div> */}
           </nav>
         )}
       </header>

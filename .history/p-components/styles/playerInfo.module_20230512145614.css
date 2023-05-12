@@ -1,0 +1,78 @@
+/* Add a background color and border to the fieldset */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+.fieldset_body {
+  background: linear-gradient(to bottom, rgba(30, 30, 30, 1) 20%, #f9f9f9 20%);
+  border: 3px solid rgb(23, 9, 9);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.tableHeader_PlayerInfo {
+  font-family: "Space Grotesk";
+  font-size: 17px;
+  font-weight: 500;
+  text-align: left;
+  color: rgba(245, 245, 245, 1);
+  padding-left: 2%;
+}
+
+.playerInfo_h2 {
+  font-family: "Space Grotesk";
+  font-weight: 700;
+  padding-left: 2%;
+
+  font-size: 15px;
+}
+
+.playerInfo_h2_title {
+  font-family: "Space Grotesk";
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 5%;
+  margin-bottom: -5%;
+  padding-left: 2%;
+}
+
+.playerInfo_p {
+  font-family: "Maven Pro";
+  padding-left: 2%;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.playerInfo_p_contact {
+  font-family: "Maven Pro";
+  padding-left: 2%;
+  font-size: 17px;
+  font-weight: 400;
+  margin-top: -6%;
+}
+.createpost_button {
+  background-color: #ceff42;
+  width: 130px;
+  height: 50px;
+  border-radius: 25px;
+  border: solid 2px;
+}
+
+.user_name {
+  width: 25vw;
+}
+
+.table_container {
+  display: flex;
+  justify-content: center;
+}
+
+.floating_button {
+  position: fixed;
+  bottom: 20px; /* adjust as needed */
+  right: 20px; /* adjust as needed */
+
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: transparent;
+  cursor: pointer;
+}

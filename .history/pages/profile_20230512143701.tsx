@@ -4,6 +4,7 @@ import router, { useRouter } from "next/router"
 import { User } from "@/types/users"
 import styles from "p-components/styles/profile.module.css"
 import Header from "@/p-components/header"
+import { MyChatComponent } from "@/p-components/ChatPage"
 
 interface UserProps {
   email: string
