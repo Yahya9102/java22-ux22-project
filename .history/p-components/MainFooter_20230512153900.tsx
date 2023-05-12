@@ -6,7 +6,7 @@ import navbarImage from "../public/posticon.png"
 
 function MainFooter() {
   const router = useRouter()
-  const [position, setPosition] = useState({ x: 40, y: 50 })
+  const [position, setPosition] = useState({ x: 40, y: 650 })
   const [dragging, setDragging] = useState(false)
   const dragStartPos = useRef({ x: 0, y: 0 })
 
