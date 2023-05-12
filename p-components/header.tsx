@@ -4,6 +4,7 @@ import gmlogo from "/public/gmlogo.png"
 import Navposticon from "@/public/navtoposticon.png"
 import Adminlockicon from "@/public/adminlockicon.png"
 import Guidelinesicon from "@/public/guidelinesicon.png"
+import Logouticon from "@/public/logouticon.png"
 
 import styles from "./styles/header.module.css"
 import router, { useRouter } from "next/router"
@@ -61,40 +62,43 @@ const Header: NextPage = ({}) => {
 
         {menuIsOpen && (
           <nav className={styles.navigation_bar}>
-            <ul className={styles.navigation_links}>
-              <li>
-                <div className={styles.postsListItem}>
-                  <h5>Posts</h5>
-                  <button type="submit" onClick={handleReturnToStartPage}>
-                    <Image
-                      src={Navposticon}
-                      alt="Picture unavailable"
-                      width={40}
-                    />
-                  </button>
-                </div>
-              </li>
-              <li className={styles.guidlinesListItem}>
-                <h5>Guidelines</h5>
-                <button type="submit" onClick={handleReturnToGuidelines}>
-                  <Image
-                    src={Guidelinesicon}
-                    alt="Picture unavailable"
-                    width={40}
-                  />
-                </button>
-              </li>
-              <li className={styles.adminListItem}>
-                <h5>Admin</h5>
-                <button type="submit" onClick={handleReturnToAdminPage}>
-                  <Image
-                    src={Adminlockicon}
-                    alt="Picture unavailable"
-                    width={40}
-                  />
-                </button>
-              </li>
-            </ul>
+            {/* <div className={styles.navigation_links}> */}
+            <div className={styles.postsListItem}>
+              <button type="submit" onClick={handleReturnToStartPage}>
+                <Image src={Navposticon} alt="Picture unavailable" width={45} />
+              </button>
+              <h5>Posts</h5>
+            </div>
+
+            <div className={styles.guidlinesListItem}>
+              <button type="submit" onClick={handleReturnToGuidelines}>
+                <Image
+                  src={Guidelinesicon}
+                  alt="Picture unavailable"
+                  width={45}
+                />
+              </button>
+              <h5>Guidelines</h5>
+            </div>
+
+            <div className={styles.logoutListItem}>
+              <button type="submit" onClick={handleReturnToGuidelines}>
+                <Image src={Logouticon} alt="Picture unavailable" width={45} />
+              </button>
+              <h5>Log Out</h5>
+            </div>
+
+            <div className={styles.adminListItem}>
+              <button type="submit" onClick={handleReturnToAdminPage}>
+                <Image
+                  src={Adminlockicon}
+                  alt="Picture unavailable"
+                  width={45}
+                />
+              </button>
+              <h5>Admin</h5>
+            </div>
+            {/* </div> */}
           </nav>
         )}
       </header>
