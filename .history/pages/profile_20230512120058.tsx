@@ -7,19 +7,21 @@ import Header from "@/p-components/header"
 import { MyChatComponent } from "@/p-components/ChatPage"
 
 interface UserProps {
+  password: string
   email: string
   name: string
 }
 
 const Profile: NextPage<UserProps> = ({}) => {
   const [userData, setUserData] = useState<UserProps | null>(null)
+  const { email } = router.query
 
   useEffect(() => {
     const fetchUserData = async () => {
-      const sessionEmail = sessionStorage.getItem("email")
-      if (!sessionEmail) return
+      if (!email) return
+      const decodedEmail = decodeURIComponent(email as string)
       try {
-        const response = await fetch(`/api/user?email=${sessionEmail}`)
+        const response = await fetch(`/api/user?email=${decodedEmail}`)
 
         const data = await response.json()
         setUserData(data)
@@ -29,12 +31,11 @@ const Profile: NextPage<UserProps> = ({}) => {
     }
 
     fetchUserData()
-  }, [])
+  }, [email])
 
   function redirectToCreatePost() {
-    const sessionEmail = sessionStorage.getItem("email")
-    if (sessionEmail) {
-      router.push(`/createpost?email=${encodeURIComponent(sessionEmail)}`)
+    if (email) {
+      router.push(`/createpost?email=${encodeURIComponent(email as string)}`)
     }
   }
 
@@ -51,6 +52,7 @@ const Profile: NextPage<UserProps> = ({}) => {
             <h2>{userData.name}</h2>
             <p>email: {userData.email}</p>
             <p>name: {userData.name}</p>
+            <p>name: {userData.password}</p>
           </div>
         ) : (
           <p>Loading user data...</p>

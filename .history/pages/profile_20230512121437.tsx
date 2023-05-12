@@ -13,6 +13,7 @@ interface UserProps {
 
 const Profile: NextPage<UserProps> = ({}) => {
   const [userData, setUserData] = useState<UserProps | null>(null)
+  const { email } = router.query
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -32,9 +33,8 @@ const Profile: NextPage<UserProps> = ({}) => {
   }, [])
 
   function redirectToCreatePost() {
-    const sessionEmail = sessionStorage.getItem("email")
-    if (sessionEmail) {
-      router.push(`/createpost?email=${encodeURIComponent(sessionEmail)}`)
+    if (email) {
+      router.push(`/createpost?email=${encodeURIComponent(email as string)}`)
     }
   }
 

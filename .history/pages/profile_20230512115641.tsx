@@ -12,17 +12,28 @@ interface UserProps {
 }
 
 const Profile: NextPage<UserProps> = ({}) => {
+  const router = useRouter()
   const [userData, setUserData] = useState<UserProps | null>(null)
+  const { email } = router.query
 
   useEffect(() => {
     const fetchUserData = async () => {
-      const sessionEmail = sessionStorage.getItem("email")
-      if (!sessionEmail) return
       try {
-        const response = await fetch(`/api/user?email=${sessionEmail}`)
+        // First, check if there is an active session
+        const sessionResponse = await fetch("/api/checkSession")
+        const sessionData = await sessionResponse.json()
 
-        const data = await response.json()
-        setUserData(data)
+        // If there is no active session, don't fetch user data
+        if (!sessionData.loggedIn) return
+        else {
+          // If there is an active session, fetch user data
+          const response = await fetch(
+            `/api/user?email=${encodeURIComponent(sessionData.email)}`
+          )
+
+          const data = await response.json()
+          setUserData(data)
+        }
       } catch (error) {
         console.error("Error fetching user data:", error)
       }
@@ -32,9 +43,8 @@ const Profile: NextPage<UserProps> = ({}) => {
   }, [])
 
   function redirectToCreatePost() {
-    const sessionEmail = sessionStorage.getItem("email")
-    if (sessionEmail) {
-      router.push(`/createpost?email=${encodeURIComponent(sessionEmail)}`)
+    if (email) {
+      router.push(`/createpost?email=${encodeURIComponent(email as string)}`)
     }
   }
 

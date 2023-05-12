@@ -1,6 +1,6 @@
 import { NextPage } from "next"
 import { useEffect, useState } from "react"
-import router, { useRouter } from "next/router"
+import { useRouter } from "next/router"
 import { User } from "@/types/users"
 import styles from "p-components/styles/profile.module.css"
 import Header from "@/p-components/header"
@@ -13,13 +13,14 @@ interface UserProps {
 
 const Profile: NextPage<UserProps> = ({}) => {
   const [userData, setUserData] = useState<UserProps | null>(null)
+  const { email } = router.query
 
   useEffect(() => {
     const fetchUserData = async () => {
-      const sessionEmail = sessionStorage.getItem("email")
-      if (!sessionEmail) return
+      if (!email) return
+      const decodedEmail = decodeURIComponent(email as string)
       try {
-        const response = await fetch(`/api/user?email=${sessionEmail}`)
+        const response = await fetch(`/api/user?email=${decodedEmail}`)
 
         const data = await response.json()
         setUserData(data)
@@ -29,12 +30,11 @@ const Profile: NextPage<UserProps> = ({}) => {
     }
 
     fetchUserData()
-  }, [])
+  }, [email])
 
   function redirectToCreatePost() {
-    const sessionEmail = sessionStorage.getItem("email")
-    if (sessionEmail) {
-      router.push(`/createpost?email=${encodeURIComponent(sessionEmail)}`)
+    if (email) {
+      router.push(`/createpost?email=${encodeURIComponent(email as string)}`)
     }
   }
 
