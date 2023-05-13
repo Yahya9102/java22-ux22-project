@@ -2,7 +2,7 @@ import { NextPage } from "next"
 import styles from "p-components/styles/playerInfo.module.css"
 import { useEffect, useState } from "react"
 import { User } from "@/types/users"
-import discordLogo from "../public/DiscordLogo.png"
+
 import navbarImage from "../public/posticon.png"
 import Image from "next/image"
 import router from "next/router"
@@ -67,16 +67,18 @@ const Body: NextPage = ({}) => {
                           <a
                             href={`discord://discordapp.com/users/${user.discord}`}
                           >
-                            <div className={styles.contact_container}>
-                              <Image
-                                src={discordLogo}
-                                alt="Picture not available"
-                                className={styles.discordLogo}
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 245 240"
+                            >
+                              <path
+                                d="M122.5 0C54.93 0 0 54.93 0 122.5S54.93 245 122.5 245 245 190.07 245 122.5 190.07 0 122.5 0zm-1.84 183.15c-46.88 0-84.75-37.88-84.75-84.75s37.88-84.75 84.75-84.75 84.75 37.88 84.75 84.75-37.87 84.75-84.75 84.75zm51.69-77.4c-2.16 0-3.92 1.76-3.92 3.92v18.11c0 2.17 1.76 3.92 3.92 3.92h16.55c2.17 0 3.92-1.76 3.92-3.92V109.28c0-2.17-1.76-3.92-3.92-3.92h-16.55c-2.16 0-3.92 1.76-3.92 3.92v45.47zm-89.58 0c-2.17 0-3.92 1.76-3.92 3.92v18.11c0 2.17 1.76 3.92 3.92 3.92h16.55c2.17 0 3.92-1.76 3.92-3.92V109.28c0-2.17-1.76-3.92-3.92-3.92H83.72c-2.16 0-3.92 1.76-3.92 3.92v45.47zm-21.98-45.47c0-24.42 19.89-44.3 44.3-44.3 24.41 0 44.3 19.88 44.3 44.3 0 24.41-19.89 44.3-44.3 44.3-24.41 0-44.3-19.89-44.3-44.3zm103.81 0c0-24.42 19.89-44.3 44.3-44.3s44.3 19.88 44.3 44.3c0 24.41-19.89 44.3-44.3 44.3s-44.3-19.89-44.3-44.3z"
+                                fill="#7289da"
                               />
-                              <p className={styles.playerInfo_p_contact}>
-                                {user.discord}
-                              </p>
-                            </div>
+                            </svg>
+                            <p className={styles.playerInfo_p_contact}>
+                              {user.discord}
+                            </p>
                           </a>
                         </nav>
                       </div>

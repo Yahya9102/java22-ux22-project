@@ -90,6 +90,7 @@ const Profile: NextPage<UserProps> = ({}) => {
                 </th>
               </tr>
             </thead>
+
             <tbody>
               {userData ? (
                 <>
@@ -130,9 +131,8 @@ const Profile: NextPage<UserProps> = ({}) => {
                     className={styles.gameImage}
                     src={game.image}
                     alt="game cover"
-                    width={50}
-                    height={50}
                   />
+
                   <h6 className={styles.gameTitle}>{game.name}</h6>
                 </div>
               )

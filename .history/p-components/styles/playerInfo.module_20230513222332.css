@@ -10,14 +10,8 @@
   margin: 20px;
 }
 
-.discordLogo {
-  width: 10%;
-}
-
 .contact_container {
-  margin-top: -6%;
   display: flex;
-  align-items: flex-end;
 }
 .tableHeader_PlayerInfo {
   font-family: "Space Grotesk";

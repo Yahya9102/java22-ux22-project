@@ -11,8 +11,8 @@ interface UserProps {
 const Profile: NextPage<UserProps> = ({}) => {
   const [userData, setUserData] = useState<UserProps | null>(null)
   const [games, setGames] = useState<any[]>([])
-  const API_KEY = process.env.NEXT_PUBLIC_GAMES_API_KEY
-  const apiKey = "VJkTFjycSRiN29"
+  const API_KEY_GAMES = process.env.NEXT_PUBLIC_GAMES_API_KEY
+  const API_KEY_AVATAR = process.env.NEXT_PUBLIC_AVATAR_API_KEY
 
   useEffect(() => {
     const fetchGames = async () => {
@@ -24,7 +24,7 @@ const Profile: NextPage<UserProps> = ({}) => {
           setGames(parsedGames)
         } else {
           const response = await fetch(
-            `https://api.rawg.io/api/games?key=${API_KEY}`
+            `https://api.rawg.io/api/games?key=${API_KEY_GAMES}`
           )
           const data = await response.json()
 
@@ -72,7 +72,7 @@ const Profile: NextPage<UserProps> = ({}) => {
   let avatarId = userData?.name
 
   useEffect(() => {
-    fetch(`https://api.multiavatar.com/${avatarId}?apikey=${apiKey}`)
+    fetch(`https://api.multiavatar.com/${avatarId}?apikey=${API_KEY_AVATAR}`)
       .then((res) => res.text())
       .then((svg) => setAvatarSvg(svg))
   }, [avatarId])
@@ -90,6 +90,7 @@ const Profile: NextPage<UserProps> = ({}) => {
                 </th>
               </tr>
             </thead>
+
             <tbody>
               {userData ? (
                 <>
@@ -133,6 +134,7 @@ const Profile: NextPage<UserProps> = ({}) => {
                     width={50}
                     height={50}
                   />
+
                   <h6 className={styles.gameTitle}>{game.name}</h6>
                 </div>
               )

@@ -2,7 +2,7 @@ import { NextPage } from "next"
 import styles from "p-components/styles/playerInfo.module.css"
 import { useEffect, useState } from "react"
 import { User } from "@/types/users"
-import discordLogo from "../public/DiscordLogo.png"
+import discordLogo from "../public/discordLogo.png"
 import navbarImage from "../public/posticon.png"
 import Image from "next/image"
 import router from "next/router"
@@ -67,16 +67,9 @@ const Body: NextPage = ({}) => {
                           <a
                             href={`discord://discordapp.com/users/${user.discord}`}
                           >
-                            <div className={styles.contact_container}>
-                              <Image
-                                src={discordLogo}
-                                alt="Picture not available"
-                                className={styles.discordLogo}
-                              />
-                              <p className={styles.playerInfo_p_contact}>
-                                {user.discord}
-                              </p>
-                            </div>
+                            <p className={styles.playerInfo_p_contact}>
+                              Discord: {user.discord}
+                            </p>
                           </a>
                         </nav>
                       </div>

@@ -12,7 +12,7 @@ const Profile: NextPage<UserProps> = ({}) => {
   const [userData, setUserData] = useState<UserProps | null>(null)
   const [games, setGames] = useState<any[]>([])
   const API_KEY = process.env.NEXT_PUBLIC_GAMES_API_KEY
-  const apiKey = "VJkTFjycSRiN29"
+  const apiKey_avatar = process.env.NEXT_PUBIC_AVATAR_API_KEY
 
   useEffect(() => {
     const fetchGames = async () => {
@@ -72,7 +72,7 @@ const Profile: NextPage<UserProps> = ({}) => {
   let avatarId = userData?.name
 
   useEffect(() => {
-    fetch(`https://api.multiavatar.com/${avatarId}?apikey=${apiKey}`)
+    fetch(`https://api.multiavatar.com/${avatarId}?apikey=${apiKey_avatar}`)
       .then((res) => res.text())
       .then((svg) => setAvatarSvg(svg))
   }, [avatarId])
@@ -90,6 +90,7 @@ const Profile: NextPage<UserProps> = ({}) => {
                 </th>
               </tr>
             </thead>
+
             <tbody>
               {userData ? (
                 <>
@@ -133,6 +134,7 @@ const Profile: NextPage<UserProps> = ({}) => {
                     width={50}
                     height={50}
                   />
+
                   <h6 className={styles.gameTitle}>{game.name}</h6>
                 </div>
               )

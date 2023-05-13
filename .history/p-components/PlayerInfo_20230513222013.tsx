@@ -67,16 +67,14 @@ const Body: NextPage = ({}) => {
                           <a
                             href={`discord://discordapp.com/users/${user.discord}`}
                           >
-                            <div className={styles.contact_container}>
+                            <p className={styles.playerInfo_p_contact}>
                               <Image
                                 src={discordLogo}
                                 alt="Picture not available"
                                 className={styles.discordLogo}
-                              />
-                              <p className={styles.playerInfo_p_contact}>
-                                {user.discord}
-                              </p>
-                            </div>
+                              />{" "}
+                              {user.discord}
+                            </p>
                           </a>
                         </nav>
                       </div>

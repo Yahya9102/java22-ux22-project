@@ -58,8 +58,8 @@
 }
 
 .gameCard img {
-  width: fit-content;
-  height: 100%;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   border-radius: 4px;
 }

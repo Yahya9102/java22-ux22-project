@@ -13,6 +13,7 @@ const Profile: NextPage<UserProps> = ({}) => {
   const [games, setGames] = useState<any[]>([])
   const API_KEY = process.env.NEXT_PUBLIC_GAMES_API_KEY
   const apiKey = "VJkTFjycSRiN29"
+  const [selectedGames, setSelectedGames] = useState<string[]>([])
 
   useEffect(() => {
     const fetchGames = async () => {

@@ -14,11 +14,6 @@
   width: 10%;
 }
 
-.contact_container {
-  margin-top: -6%;
-  display: flex;
-  align-items: flex-end;
-}
 .tableHeader_PlayerInfo {
   font-family: "Space Grotesk";
   font-size: 17px;
@@ -52,13 +47,6 @@
   font-weight: 400;
 }
 
-.playerInfo_p_contact {
-  font-family: "Maven Pro";
-  padding-left: 2%;
-  font-size: 17px;
-  font-weight: 400;
-  margin-top: -6%;
-}
 .createpost_button {
   background-color: #ceff42;
   width: 130px;

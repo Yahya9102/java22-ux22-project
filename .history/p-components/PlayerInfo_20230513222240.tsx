@@ -67,7 +67,7 @@ const Body: NextPage = ({}) => {
                           <a
                             href={`discord://discordapp.com/users/${user.discord}`}
                           >
-                            <div className={styles.contact_container}>
+                            <div>
                               <Image
                                 src={discordLogo}
                                 alt="Picture not available"
