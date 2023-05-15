@@ -5,6 +5,7 @@ import Navposticon from "@/public/navtoposticon.png"
 import Adminlockicon from "@/public/adminlockicon.png"
 import Guidelinesicon from "@/public/guidelinesicon.png"
 import Logouticon from "@/public/logouticon.png"
+import Profileicon from "@/public/profileicon.png"
 
 import styles from "./styles/header.module.css"
 import router from "next/router"
@@ -15,10 +16,18 @@ const Header: NextPage = ({}) => {
     router.push("/startPage")
   }
 
+  const handleReturnToProfilePage = () => {
+    router.push("/profile")
+  }
+
   const handleReturnToGuidelines = () => {
     router.push("/GuidelinePage")
     sessionStorage.removeItem("email")
     sessionStorage.removeItem("games")
+  }
+
+  const handleReturnToLoginPage = () => {
+    router.push("/loginPage")
   }
 
   const handleReturnToAdminPage = () => {
@@ -71,6 +80,13 @@ const Header: NextPage = ({}) => {
               <h5>Posts</h5>
             </div>
 
+            <div className={styles.profileListItem}>
+              <button type="submit" onClick={handleReturnToProfilePage}>
+                <Image src={Profileicon} alt="Picture unavailable" width={45} />
+              </button>
+              <h5>Profile</h5>
+            </div>
+
             <div className={styles.guidlinesListItem}>
               <button type="submit" onClick={handleReturnToGuidelines}>
                 <Image
@@ -83,7 +99,7 @@ const Header: NextPage = ({}) => {
             </div>
 
             <div className={styles.logoutListItem}>
-              <button type="submit" onClick={handleReturnToGuidelines}>
+              <button type="submit" onClick={handleReturnToLoginPage}>
                 <Image src={Logouticon} alt="Picture unavailable" width={45} />
               </button>
               <h5>Log Out</h5>
