@@ -132,7 +132,7 @@ const AdminPage: NextPage = () => {
                 <tr>
                   <th className={style.tableHeader_PlayerInfo}>
                     {user.name}
-                    <h6 className={styles.user_location}> {user.location}</h6>
+                    <h6 className={styles.user_location}> {}</h6>
                   </th>
                 </tr>
               </thead>

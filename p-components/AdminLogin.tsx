@@ -68,11 +68,11 @@ const AdminLogin: NextPage = () => {
               password: e.target.value,
             })
           }
-          placeholder="password"
+          placeholder="Password"
         />
         <br />
         <button className={styles.adminLogin_button} onClick={handleLoginClick}>
-          Login
+          Log in
         </button>
       </fieldset>
     </div>

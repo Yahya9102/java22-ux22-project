@@ -89,7 +89,6 @@ const CreateUserPosts: NextPage = () => {
             <strong>Name</strong>
           </label>
           <p className={styles.input_label}>What should we call you?</p>
-          <br />
           <input
             type="text"
             placeholder='Ex: "Jane Doe" or "@useer01"'
@@ -104,7 +103,6 @@ const CreateUserPosts: NextPage = () => {
           <p className={styles.input_label}>
             Give your post a descriptive title
           </p>
-          <br />
           <input
             type="text"
             name="title"
@@ -122,7 +120,6 @@ const CreateUserPosts: NextPage = () => {
           <p className={styles.input_label}>
             Who are you? And who are you looking for?
           </p>
-          <br />
 
           <textarea
             name="post"
@@ -130,18 +127,16 @@ const CreateUserPosts: NextPage = () => {
             placeholder='Ex "Looking for someone to play League with. Preferably someone new to the game like me, so we can improve together."'
             cols={20}
             rows={5}
-            className={styles.input_fields}
+            className={styles.input_field_desc}
             onChange={handleTextChange}
             value={postData.post}
           />
           <h2 className={styles.input_label}>
             <strong>Contact Channels</strong>
           </h2>
-          <br />
           <p className={styles.input_label}>
             Add your discord channel for contact
           </p>
-          <br />
 
           <div className={styles.contact_frames}>
             <div>
@@ -159,7 +154,7 @@ const CreateUserPosts: NextPage = () => {
                 className={styles.input_fields_contact}
               />
             </div>
-            <div>
+            {/* <div>
               <label htmlFor="location" className={styles.contact_info_label}>
                 <strong>Location</strong>
               </label>
@@ -173,7 +168,7 @@ const CreateUserPosts: NextPage = () => {
                 value={postData.location}
                 className={styles.input_fields_contact}
               />
-            </div>
+            </div> */}
           </div>
 
           <br />
