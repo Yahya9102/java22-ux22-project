@@ -33,7 +33,8 @@ const Login: NextPage = () => {
       }
 
       const data = await response.json()
-      router.push(`/profile?email=${encodeURIComponent(data.email)}`)
+      // router.push(`/profile?email=${encodeURIComponent(data.email)}`)
+      router.push("/startPage")
       sessionStorage.setItem("email", data.email)
     } catch (error) {
       console.error("Error during login:", error)
