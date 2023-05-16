@@ -27,7 +27,10 @@ const Header: NextPage = ({}) => {
   }
 
   const handleReturnToLoginPage = () => {
-    router.push("/loginPage")
+    const shouldLogOut = window.confirm("Are you sure you want to log out?")
+    if (shouldLogOut) {
+      router.push("/loginPage")
+    }
   }
 
   const handleReturnToAdminPage = () => {
