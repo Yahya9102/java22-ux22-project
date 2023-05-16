@@ -154,21 +154,6 @@ const CreateUserPosts: NextPage = () => {
                 className={styles.input_fields_contact}
               />
             </div>
-            {/* <div>
-              <label htmlFor="location" className={styles.contact_info_label}>
-                <strong>Location</strong>
-              </label>
-              <br />
-              <input
-                type="text"
-                name="location"
-                id=""
-                placeholder="Ex: New York, USA"
-                onChange={handleLocationChange}
-                value={postData.location}
-                className={styles.input_fields_contact}
-              />
-            </div> */}
           </div>
 
           <br />

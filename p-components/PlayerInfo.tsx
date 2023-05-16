@@ -29,9 +29,11 @@ const Body: NextPage = ({}) => {
   }, [])
 
   return (
-    <div>
+    <div className={styles.post_body}>
       <div className={styles.table_container}>
-        <h1 className={styles.posts_text}></h1>
+        <h1>
+          <strong>Posts</strong>
+        </h1>
       </div>
 
       {Array.isArray(users) &&

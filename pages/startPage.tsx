@@ -8,10 +8,6 @@ const Index: NextPage<User> = ({}) => {
   return (
     <div>
       <Header />
-      <h1 className="text-center">
-        <strong>Posts</strong>
-      </h1>
-
       <PlayerInfo />
       <MainFooter />
     </div>

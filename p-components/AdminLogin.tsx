@@ -31,52 +31,58 @@ const AdminLogin: NextPage = () => {
 
   return (
     <div>
-    <div className={styles.admin_header}>
-      <strong>Admin</strong>
-    </div>
+      <div className={styles.admin_header}>
+        <strong>Admin</strong>
+      </div>
 
-    <div className={styles.admin_body}>
-      <fieldset className={styles.admin_fieldset}>
-        <label htmlFor="adminUsername" className={styles.label}>
-          <strong>Admin Log In</strong>
-        </label>
-        <br />
-        <input
-          className={styles.input_fields}
-          type="text"
-          name="adminUsername"
-          id="adminUsername"
-          value={adminCredentials.username}
-          onChange={(e) =>
-            setAdminCredentials({
-              ...adminCredentials,
-              username: e.target.value,
-            })
-          }
-          placeholder="Username"
-        />
+      <div className={styles.admin_body}>
+        <fieldset className={styles.admin_fieldset}>
+          <label htmlFor="adminUsername" className={styles.label}>
+            <strong>Admin Log In</strong>
+          </label>
+          <br />
+          <div className={styles.input_fields_div}>
+            <input
+              className={styles.input_fields}
+              type="text"
+              name="adminUsername"
+              id="adminUsername"
+              value={adminCredentials.username}
+              onChange={(e) =>
+                setAdminCredentials({
+                  ...adminCredentials,
+                  username: e.target.value,
+                })
+              }
+              placeholder="Username"
+            />
 
-        <input
-          className={styles.input_fields}
-          type="password"
-          name="adminPassword"
-          id="adminPassword"
-          value={adminCredentials.password}
-          onChange={(e) =>
-            setAdminCredentials({
-              ...adminCredentials,
-              password: e.target.value,
-            })
-          }
-          placeholder="Password"
-        />
-        <br />
-        <button className={styles.adminLogin_button} onClick={handleLoginClick}>
-          Log in
-        </button>
-      </fieldset>
+            <input
+              className={styles.input_fields}
+              type="password"
+              name="adminPassword"
+              id="adminPassword"
+              value={adminCredentials.password}
+              onChange={(e) =>
+                setAdminCredentials({
+                  ...adminCredentials,
+                  password: e.target.value,
+                })
+              }
+              placeholder="Password"
+            />
+          </div>
+          <br />
+          <button
+            className={styles.adminLogin_button}
+            onClick={handleLoginClick}
+          >
+            Log in
+          </button>
+        </fieldset>
+      </div>
     </div>
-    </div>)
+  )
 }
 
 export default AdminLogin

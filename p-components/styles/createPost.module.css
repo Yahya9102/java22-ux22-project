@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
 
 .form_body {
   height: 100vh;
@@ -10,7 +11,7 @@
 .input_fields {
   border: solid 2px;
   width: 95vw;
-  height: 4vh;
+  height: 5vh;
   border-radius: 12px;
   margin: 10px;
   font-family: "Space Grotesk";
@@ -20,6 +21,7 @@
 .input_label {
   padding-left: 10px;
 }
+
 .button_div {
   display: flex;
   width: 100%;
@@ -32,11 +34,10 @@
   background-color: #ceff42;
   width: 130px;
   height: 50px;
-  font-size: 22px;
+  font-size: 20px;
   border-radius: 25px;
   border: solid 3px;
   font-family: "Space Grotesk";
-  
 }
 
 .link_P {
@@ -49,17 +50,17 @@
   align-items: center;
   border: solid 2px;
   border-radius: 25px;
+  font-family: "Space Grotesk";
 }
 
 .input_fields_contact {
   border: solid 2px;
   width: 95vw;
-  height: 4vh ;
+  height: 5vh;
   border-radius: 12px;
   margin: 10px;
   font-family: "Space Grotesk";
   padding-left: 15px;
-  
 }
 
 .contact_info_label {
@@ -70,7 +71,7 @@
   display: flex;
 }
 
-.input_field_desc{
+.input_field_desc {
   border: solid 2px;
   width: 95vw;
   height: 12vh;
@@ -80,5 +81,3 @@
   padding-left: 15px;
   padding-top: 10px;
 }
-
-
