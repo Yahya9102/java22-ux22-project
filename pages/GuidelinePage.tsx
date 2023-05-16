@@ -14,7 +14,7 @@ const guidelinePage: NextPage = () => {
   return (
     <div className={styles.guidelinePage_body}>
       <div className={styles.guidelinePage_Top}>
-        <h1 className={styles.h1}>YAY! We are excited to have you onboard!</h1>
+        <h1 className={styles.h1}>YAY! We are excited to have you on board!</h1>
       </div>
       <div className={styles.onionImage}>
         <div className={styles.oniontext_div}>
@@ -89,7 +89,7 @@ const guidelinePage: NextPage = () => {
       </div>
       <div className={styles.button_div}>
         <button onClick={redirectoIndex} className={styles.button}>
-          Ok i promise!
+          OK I promise!
         </button>
       </div>
     </div>

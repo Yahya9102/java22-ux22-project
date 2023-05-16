@@ -9,7 +9,6 @@ const adminLogin: NextPage<User> = ({}) => {
     <div>
       <Header />
       <AdminLogin />
-      <MainFooter />
     </div>
   )
 }

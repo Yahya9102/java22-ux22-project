@@ -30,6 +30,11 @@ const AdminLogin: NextPage = () => {
   }
 
   return (
+    <div>
+    <div className={styles.admin_header}>
+      <strong>Admin</strong>
+    </div>
+
     <div className={styles.admin_body}>
       <fieldset className={styles.admin_fieldset}>
         <label htmlFor="adminUsername" className={styles.label}>
@@ -71,7 +76,7 @@ const AdminLogin: NextPage = () => {
         </button>
       </fieldset>
     </div>
-  )
+    </div>)
 }
 
 export default AdminLogin

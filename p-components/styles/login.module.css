@@ -7,22 +7,23 @@
   font-family: "Space Grotesk";
   padding-left: 5px;
   width: 95%;
-  height: 40px;
+  height: 55px;
 }
 
 .userLogin_button {
   background-color: #ceff42;
-  width: 250px;
-  height: 45px;
+  width: 100%;
+  height: 55px;
   border-radius: 105px;
   border: solid 2px;
   margin-top: 4%;
-  margin-left: 5%;
+  font-weight: 700;
 }
 
 .label {
   display: flex;
   margin-bottom: -30px;
+  margin-top: 10px;
   margin-left: 4%;
   font-family: "Space Grotesk";
   font-weight: 700;
@@ -50,10 +51,12 @@
   height: 100vh;
 }
 .createAccount_div {
-  margin-left: 20%;
+  display: flex;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   margin-top: 30%;
 }
 
@@ -65,23 +68,20 @@
   line-height: 24px;
   letter-spacing: 0.5px;
   color: #d7ff63;
-  margin-left: 20%;
   margin-top: 20%;
-  margin-bottom: -5%;
+  margin-bottom: -2%;
 }
 
 .create_account_button {
-  box-sizing: border-box;
   color: rgba(255, 255, 255, 1);
   font-family: "Space Grotesk";
   font-weight: 700;
-  width: 260px;
-  height: 45px;
+  width: 85%;
+  height: 55px;
   background: #1e1e1e;
   border: 2px solid #1e1e1e;
   border-radius: 100px;
   margin-bottom: 5%;
-  margin-right: 2%;
 }
 
 .login_h2 {
@@ -90,7 +90,9 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
-  padding-left: 33vw;
+  display: flex;
+  width: 100%;
+  justify-content: center;
   letter-spacing: 0.5px;
   padding-bottom: 10%;
   color: #000000;
